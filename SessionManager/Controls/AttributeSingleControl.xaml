@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="SessionManager.Controls.AttributeSingleControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:controls="clr-namespace:SessionManager.Controls"
+             mc:Ignorable="d" Height="85" Width="145">
+    <Canvas>
+        <Polygon Fill="{StaticResource TitleLightBlue}" 
+                 Stretch="Fill" Width="145" Height="50" 
+                 Canvas.Top="35" Canvas.Left="0" 
+                 Points="0.0689,0 0.9310,0 1,0.2352 1,0.7765 0.9310,1.0118 0.069,1.0118 0,0.7765 0,0.2353"/>
+        <Polygon Stroke="{StaticResource TitleBlue}" StrokeThickness="0.5"
+                 Fill="{StaticResource TitleBeige}" Canvas.Top="0" Canvas.Left="5"
+                 Points="20,0 115,0 135,20 135,50 115,70 20,70 0,50 0,20"/>
+        <Polygon Stroke="{StaticResource TitleBlue}" StrokeThickness="1"
+                 Fill="White" Canvas.Top="2" Canvas.Left="7" 
+                 Points="20,0 115,0 135,20 135,50 115,70 20,70 0,50 0,20" 
+                 Stretch="Fill" Height="66" Width="131"/>
+        <TextBlock Style="{StaticResource AttributeTitleStyle}"
+                   FontSize="10" Canvas.Top="5" Canvas.Left="18" 
+                   Width="110" Height="20" Padding="3"
+                   Text="{Binding AttributeName, 
+                          Converter={StaticResource StringToUpperConverter},
+                          RelativeSource={RelativeSource FindAncestor, 
+                          AncestorType={x:Type controls:AttributeSingleControl}},
+                          FallbackValue=INVALID}"/>
+        <TextBlock FontSize="30" Canvas.Left="29" Canvas.Top="25"
+                   Text="{Binding AttributeValue, 
+                          RelativeSource={RelativeSource FindAncestor, 
+                          AncestorType={x:Type controls:AttributeSingleControl}},
+                          FallbackValue=##}" Width="88"
+                   TextAlignment="Center"/>
+    </Canvas>
+</UserControl>

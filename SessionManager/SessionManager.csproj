@@ -56,13 +56,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\AttributeMultiControl.xaml.cs">
+      <DependentUpon>AttributeMultiControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AttributesHeaderControl.xaml.cs">
+      <DependentUpon>AttributesHeaderControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AttributeSingleControl.xaml.cs">
+      <DependentUpon>AttributeSingleControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AttributeThresholdControl.xaml.cs">
+      <DependentUpon>AttributeThresholdControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CharacteristicControl.xaml.cs">
       <DependentUpon>CharacteristicControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\CharacteristicsHeaderControl.xaml.cs">
       <DependentUpon>CharacteristicsHeaderControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\SectionHeader.xaml.cs">
+      <DependentUpon>SectionHeader.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Converters\StringToUpper.cs" />
+    <Compile Include="Dto\Attributes.cs" />
     <Compile Include="Dto\Character.cs" />
     <Compile Include="Dto\Characteristics.cs" />
     <Compile Include="Properties\Annotations.cs" />
@@ -82,11 +98,31 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Controls\AttributeMultiControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\AttributesHeaderControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\AttributeSingleControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\AttributeThresholdControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\CharacteristicControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\CharacteristicsHeaderControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SectionHeader.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

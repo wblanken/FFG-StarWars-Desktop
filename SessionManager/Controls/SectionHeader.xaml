@@ -1,0 +1,25 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SessionManager.Controls" x:Class="SessionManager.Controls.SectionHeader" 
+             mc:Ignorable="d" Width="700" Height="20">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="275"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="275"/>
+        </Grid.ColumnDefinitions>
+        <Polygon Grid.Column="0" Grid.ColumnSpan="2" Fill="{StaticResource TitleRed}" Height="5"
+			Stretch="Fill" Width="285" HorizontalAlignment="Left" VerticalAlignment="Top"
+			Points="10,0 284.5,0 285,2 275,5 0.5,5 0,3"/>
+        <TextBlock Height="16" Grid.Column="1" Text="{Binding Header, Converter={StaticResource StringToUpperConverter}, 
+                                                      RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SectionHeader}}, 
+                                                      FallbackValue=NULL VALUE}" 
+			Style="{StaticResource TitleBlockStyle}" Margin="0,0,0,2"/>
+        <Polygon Grid.Column="1" Grid.ColumnSpan="2" Fill="{StaticResource TitleRed}" Height="5"
+			Stretch="Fill" Width="285" HorizontalAlignment="Right" VerticalAlignment="Top"
+			Points="10,5 284.5,5 285,3 275,0 0.5,0 0,2"/>
+    </Grid>
+</UserControl>

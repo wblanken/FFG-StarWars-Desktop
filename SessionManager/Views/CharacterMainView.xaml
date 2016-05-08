@@ -3,17 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:SessionManager.Views"
              xmlns:controls="clr-namespace:SessionManager.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="1000" Width="700">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>  
-        
-        <controls:CharacteristicsHeaderControl Grid.Row="1" Characteristics="{Binding Character.Characteristics}"/>
+        <controls:AttributesHeaderControl Grid.Row="0" Attributes="{Binding Character.Attributes}"/>
+        <controls:CharacteristicsHeaderControl Grid.Row="2" Characteristics="{Binding Character.Characteristics}"/>
     </Grid>
 </UserControl>

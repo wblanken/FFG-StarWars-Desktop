@@ -1,11 +1,15 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:SessionManager.Resources">
+                    xmlns:converters="clr-namespace:SessionManager.Converters">
+    <!-- Converters -->
+    <converters:StringToUpper x:Key="StringToUpperConverter"/>
+
     <!-- Colors -->
     <Brush x:Key="TitleRed">#761213</Brush>
     <Brush x:Key="TitleGreen">#51634b</Brush>
     <Brush x:Key="TitleBeige">#ab9f8a</Brush>
     <Brush x:Key="TitleBlue">#495558</Brush>
+    <Brush x:Key="TitleLightBlue">#72cddc</Brush>
     
     <!-- Visual Brushes -->
     <VisualBrush x:Key="TitleBackground">
@@ -15,7 +19,14 @@
                                      Stretch="Fill" StrokeThickness="1"/>
         </VisualBrush.Visual>
     </VisualBrush>
-    
+
+    <VisualBrush x:Key="AttributeTitleBackground">
+        <VisualBrush.Visual>
+            <Polygon Points="0,7.5 15,0 135,0 150,7.5 135,15 15,15 0,7.5"
+                                     Fill="{StaticResource TitleBlue}" Stretch="Fill"/>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
     <!-- Control Styles -->
     <Style x:Key="TitleBlockStyle" TargetType="TextBlock">
         <Style.Setters>
@@ -24,5 +35,13 @@
             <Setter Property="Background" Value="{StaticResource TitleBackground}"/>
         </Style.Setters>
     </Style>
-    
+
+    <Style x:Key="AttributeTitleStyle" TargetType="TextBlock">
+        <Style.Setters>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Background" Value="{StaticResource AttributeTitleBackground}"/>
+        </Style.Setters>
+    </Style>
+
 </ResourceDictionary>
