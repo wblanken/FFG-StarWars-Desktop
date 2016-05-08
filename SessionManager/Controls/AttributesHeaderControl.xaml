@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:controls="clr-namespace:SessionManager.Controls"
+             xmlns:strings="clr-namespace:SessionManager.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="115" Width="700">
     <Grid>
@@ -11,7 +12,7 @@
             <RowDefinition Height="20"/>
             <RowDefinition Height="95"/>
         </Grid.RowDefinitions>
-        <controls:SectionHeader Grid.Row="0" Header="Attributes"/>
+        <controls:SectionHeader Grid.Row="0" Header="{x:Static strings:Resources.Attributes}"/>
         <Polygon Margin="0,30,0,0" Fill="{StaticResource TitleBeige}" 
                  Grid.Row="1" Stretch="Fill"
                  Points="0,15 15,0 685,0 700,15 700,85 685,100 15,100 0,85"/>
@@ -27,37 +28,43 @@
                 <ColumnDefinition Width="145"/>
                 <ColumnDefinition Width="10"/>
             </Grid.ColumnDefinitions>
-            <controls:AttributeSingleControl Grid.Column="1" AttributeName="Soak Value" 
+            <controls:AttributeSingleControl Grid.Column="1" AttributeName="{x:Static strings:Resources.Soak}" 
                                              AttributeValue="{Binding Attributes.Soak, Mode=OneWay, 
                                                               RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:AttributesHeaderControl}}, 
                                                               FallbackValue=0}"/>
-            <Rectangle Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Center" Stroke="White" Margin="0,30,0,-5"/>
-            <Ellipse Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Center" Stroke="{StaticResource TitleBlue}" Margin="0,36,0,0" StrokeThickness="5"/>
-            <controls:AttributeThresholdControl Grid.Column="3" AttributeName="Wounds" AttributeMax="Threshold" AttributeValueName="Current"  
+            <Rectangle Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Center" Stroke="White" Margin="0,30,0,-10"/>
+            <Ellipse Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Center" Stroke="{StaticResource TitleBlue}" Margin="0,36,0,-5" StrokeThickness="5"/>
+            <controls:AttributeThresholdControl Grid.Column="3" AttributeName="{x:Static strings:Resources.Wounds}" 
+                                                AttributeMax="{x:Static strings:Resources.Threshold}" 
+                                                AttributeValueName="{x:Static strings:Resources.Current}"  
                                                 AttributeValue="{Binding Attributes.Wounds, Mode=TwoWay, 
                                                                      RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:AttributesHeaderControl}}, 
                                                                      FallbackValue=0}" 
                                                 AttributeThreshold="{Binding Attributes.WoundsThreshold, Mode=OneWay, 
                                                                      RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:AttributesHeaderControl}}, 
                                                                      FallbackValue=0}"/>
-            <Rectangle Grid.Column="4" VerticalAlignment="Stretch" HorizontalAlignment="Center" Stroke="White" Margin="0,30,0,-5"/>
-            <Ellipse Grid.Column="4" VerticalAlignment="Stretch" HorizontalAlignment="Center" Stroke="{StaticResource TitleBlue}" Margin="1,36,0,0" StrokeThickness="5"/>
-            <controls:AttributeThresholdControl Grid.Column="5" AttributeName="Strain" AttributeMax="Threshold" AttributeValueName="Current"
+            <Rectangle Grid.Column="4" VerticalAlignment="Stretch" HorizontalAlignment="Center" Stroke="White" Margin="0,30,0,-10"/>
+            <Ellipse Grid.Column="4" VerticalAlignment="Stretch" HorizontalAlignment="Center" Stroke="{StaticResource TitleBlue}" Margin="1,36,0,-5" StrokeThickness="5"/>
+            <controls:AttributeThresholdControl Grid.Column="5" AttributeName="{x:Static strings:Resources.Strain}" 
+                                                AttributeMax="{x:Static strings:Resources.Threshold}" 
+                                                AttributeValueName="{x:Static strings:Resources.Current}"
                                                 AttributeValue="{Binding Attributes.Strain, Mode=TwoWay, 
                                                                      RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:AttributesHeaderControl}}, 
                                                                      FallbackValue=0}" 
                                                 AttributeThreshold="{Binding Attributes.StrainThreshold, Mode=OneWay, 
                                                                      RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:AttributesHeaderControl}}, 
                                                                      FallbackValue=0}"/>
-            <Rectangle Grid.Column="6" VerticalAlignment="Stretch" HorizontalAlignment="Center" Stroke="White" Margin="0,30,0,-5"/>
-            <Ellipse Grid.Column="6" VerticalAlignment="Stretch" HorizontalAlignment="Center" Stroke="{StaticResource TitleBlue}" Margin="0,36,0,0" StrokeThickness="5"/>
-            <controls:AttributeMultiControl Grid.Column="7" AttributeName="Defense" AttributeLeftName="Ranged" AttributeRightName="Melee"
-                                                AttributeLeftValue="{Binding Attributes.MeleeDefense, Mode=OneWay, 
-                                                                     RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:AttributesHeaderControl}}, 
-                                                                     FallbackValue=0}"
-                                                AttributeRightValue="{Binding Attributes.RangedDefense, Mode=OneWay, 
-                                                                     RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:AttributesHeaderControl}}, 
-                                                                     FallbackValue=0}"/>
+            <Rectangle Grid.Column="6" VerticalAlignment="Stretch" HorizontalAlignment="Center" Stroke="White" Margin="0,30,0,-10"/>
+            <Ellipse Grid.Column="6" VerticalAlignment="Stretch" HorizontalAlignment="Center" Stroke="{StaticResource TitleBlue}" Margin="0,36,0,-5" StrokeThickness="5"/>
+            <controls:AttributeMultiControl Grid.Column="7" AttributeName="{x:Static strings:Resources.Defense}" 
+                                            AttributeLeftName="{x:Static strings:Resources.Ranged}" 
+                                            AttributeRightName="{x:Static strings:Resources.Melee}"
+                                            AttributeLeftValue="{Binding Attributes.MeleeDefense, Mode=OneWay, 
+                                                                 RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:AttributesHeaderControl}}, 
+                                                                 FallbackValue=0}"
+                                            AttributeRightValue="{Binding Attributes.RangedDefense, Mode=OneWay, 
+                                                                  RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:AttributesHeaderControl}}, 
+                                                                  FallbackValue=0}"/>
         </Grid>
     </Grid>
 </UserControl>

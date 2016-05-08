@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using SessionManager.Dto;
+using System.Resources;
 
 namespace SessionManager.Controls
 {
@@ -15,7 +16,7 @@ namespace SessionManager.Controls
       }
 
       public static DependencyProperty CharacteristicsDependencyProperty =
-         DependencyProperty.Register("Characteristics", typeof(Characteristics), typeof(CharacteristicsHeaderControl));
+         DependencyProperty.Register(Properties.Resources.Characteristics, typeof(Characteristics), typeof(CharacteristicsHeaderControl));
 
       public Characteristics Characteristics
       {

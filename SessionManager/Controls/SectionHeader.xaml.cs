@@ -14,7 +14,7 @@ namespace SessionManager.Controls
       }
 
       public static DependencyProperty HeaderProperty =
-         DependencyProperty.Register("Header", typeof(string), typeof(SectionHeader));
+         DependencyProperty.Register(Properties.Resources.Header, typeof(string), typeof(SectionHeader));
 
       public string Header
       {

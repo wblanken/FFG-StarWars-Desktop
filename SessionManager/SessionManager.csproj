@@ -56,6 +56,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Characteristic.cs" />
     <Compile Include="Controls\AttributeMultiControl.xaml.cs">
       <DependentUpon>AttributeMultiControl.xaml</DependentUpon>
     </Compile>
@@ -77,10 +78,18 @@
     <Compile Include="Controls\SectionHeader.xaml.cs">
       <DependentUpon>SectionHeader.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\SkillListControl.xaml.cs">
+      <DependentUpon>SkillListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SkillsControl.xaml.cs">
+      <DependentUpon>SkillsControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Converters\StringToUpper.cs" />
     <Compile Include="Dto\Attributes.cs" />
     <Compile Include="Dto\Character.cs" />
     <Compile Include="Dto\Characteristics.cs" />
+    <Compile Include="Dto\Skill.cs" />
+    <Compile Include="Utility.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModels\CharacterViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
@@ -126,6 +135,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\SkillListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SkillsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\Styles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -158,7 +175,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -170,7 +187,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\Proficiency.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Ability.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
