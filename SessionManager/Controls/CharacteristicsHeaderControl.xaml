@@ -5,14 +5,29 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:controls="clr-namespace:SessionManager.Controls"
              mc:Ignorable="d" 
-             Height="125" Width="700">
+             Height="120" Width="700">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25"/>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
-        <Polygon Grid.Row="0" Grid.RowSpan="2" Fill="#ab9f8a" Width="700" Height="100"
+        <Polygon Grid.Row="0" Grid.RowSpan="2" Fill="{StaticResource TitleBeige}" Width="700" Height="100"
                      Points="10,0 0,10 0,75 15,100 685,100 700,75 700,10 690,0"/>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="275"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="275"/>
+            </Grid.ColumnDefinitions>
+            <Polygon Grid.Column="0" Grid.ColumnSpan="2" Fill="{StaticResource TitleRed}" Height="5"
+                     Stretch="Fill" Width="285" HorizontalAlignment="Left" VerticalAlignment="Top"
+                     Points="10,0 284.5,0 285,2 275,5 0.5,5 0,3"/>
+            <TextBlock Height="16" Grid.Column="1" Text="CHARACTERISTICS" 
+                       Style="{StaticResource TitleBlockStyle}" Margin="0,0,0,2"/>
+            <Polygon Grid.Column="1" Grid.ColumnSpan="2" Fill="{StaticResource TitleRed}" Height="5"
+                     Stretch="Fill" Width="285" HorizontalAlignment="Right" VerticalAlignment="Top"
+                     Points="10,5 284.5,5, 285,3 275,0 0.5,0 0,2"/>
+        </Grid>
         <Grid Grid.Row="1" Margin="15,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -23,7 +38,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <controls:CharacteristicControl Grid.Column="0" CharacteristicName="Brawn" 
-                                            CharacteristicValue="{Binding Characteristics, FallbackValue=0, 
+                                            CharacteristicValue="{Binding Path=Characteristics.Brawn, FallbackValue=0, 
                 RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:CharacteristicsHeaderControl}}}"/>
             <controls:CharacteristicControl Grid.Column="1" CharacteristicName="Agility" 
                                             CharacteristicValue="{Binding Path=Characteristics.Agility, FallbackValue=0, 

@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:SessionManager.Resources">
+    <!-- Colors -->
+    <Brush x:Key="TitleRed">#761213</Brush>
+    <Brush x:Key="TitleGreen">#51634b</Brush>
+    <Brush x:Key="TitleBeige">#ab9f8a</Brush>
+    <Brush x:Key="TitleBlue">#495558</Brush>
+    
+    <!-- Visual Brushes -->
+    <VisualBrush x:Key="TitleBackground">
+        <VisualBrush.Visual>
+            <Polygon Points="0,7.5 20,0 130,0 150,7.5 130,15 20,15 0,7.5"
+                                     Fill="{StaticResource TitleBlue}" Stroke="Black"
+                                     Stretch="Fill" StrokeThickness="1"/>
+        </VisualBrush.Visual>
+    </VisualBrush>
+    
+    <!-- Control Styles -->
+    <Style x:Key="TitleBlockStyle" TargetType="TextBlock">
+        <Style.Setters>
+            <Setter Property="Foreground" Value="{StaticResource TitleBeige}"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Background" Value="{StaticResource TitleBackground}"/>
+        </Style.Setters>
+    </Style>
+    
+</ResourceDictionary>

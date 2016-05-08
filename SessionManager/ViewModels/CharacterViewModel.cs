@@ -1,7 +1,9 @@
-﻿namespace SessionManager.ViewModels
+﻿using SessionManager.Dto;
+
+namespace SessionManager.ViewModels
 {
    public class CharacterViewModel : ViewModelBase
    {
-      //public Character Character { get; set; }
+      public Character Character { get; set; }
    }
 }
