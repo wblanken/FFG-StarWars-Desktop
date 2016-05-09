@@ -16,6 +16,6 @@
         </Grid.RowDefinitions>  
         <controls:AttributesHeaderControl Grid.Row="0" Attributes="{Binding Character.Attributes}"/>
         <controls:CharacteristicsHeaderControl Grid.Row="2" Characteristics="{Binding Character.Characteristics}"/>
-        <controls:SkillsControl Grid.Row="4"/>
+        <controls:SkillsControl Grid.Row="4" GeneralSkills="{Binding Character.GeneralSkills}"/>
     </Grid>
 </UserControl>

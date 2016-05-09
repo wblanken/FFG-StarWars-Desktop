@@ -10,6 +10,7 @@
     <Brush x:Key="TitleBeige">#ab9f8a</Brush>
     <Brush x:Key="TitleBlue">#495558</Brush>
     <Brush x:Key="TitleLightBlue">#72cddc</Brush>
+    <Brush x:Key="GridPaleBlue">#e6f6fc</Brush>
     
     <!-- Visual Brushes -->
     <VisualBrush x:Key="TitleBackground">

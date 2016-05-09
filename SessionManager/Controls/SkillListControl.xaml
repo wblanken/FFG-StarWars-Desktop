@@ -4,9 +4,43 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:strings="clr-namespace:SessionManager.Properties"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        
-    </Grid>
+             xmlns:controls="clr-namespace:SessionManager.Controls" 
+             xmlns:utility="clr-namespace:SessionManager"
+             xmlns:converters="clr-namespace:SessionManager.Converters"
+             mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="300">
+    <UserControl.Resources>
+        <utility:BindingProxy x:Key="SkillNameProxy" Data="{Binding SkillListName, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:SkillListControl}}}"/>
+        <utility:BindingProxy x:Key="DataProxy" Data="{Binding}"/>
+        <converters:ImageCollectionConverter x:Key="ImageCollectionConverter"/>
+    </UserControl.Resources>
+    <DataGrid RowBackground="{StaticResource GridPaleBlue}" AlternatingRowBackground="{StaticResource TitleBeige}" 
+		AutoGenerateColumns="False" ItemsSource="{Binding SkillList, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:SkillListControl}}}">
+        <DataGrid.ColumnHeaderStyle>
+            <Style TargetType="{x:Type DataGridColumnHeader}">
+                <Setter Property="Background" Value="{StaticResource TitleRed}"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Padding" Value="5"/>
+            </Style>
+        </DataGrid.ColumnHeaderStyle>
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="{Binding Data, Source={StaticResource SkillNameProxy}, Converter={StaticResource StringToUpperConverter}}"
+                                Width="*" Binding="{Binding Name}"/>
+            <DataGridCheckBoxColumn Header="{Binding Converter={StaticResource StringToUpperConverter}, 
+                                             Source={x:Static strings:Resources.Career}}"
+                                    Binding="{Binding Career}"/>
+            <DataGridTextColumn Header="{Binding Converter={StaticResource StringToUpperConverter}, 
+                                         Source={x:Static strings:Resources.Rank}}"
+                                Binding="{Binding Rank}"/>
+            <DataGridTemplateColumn Header="{Binding Converter={StaticResource StringToUpperConverter}, 
+                                             Source={x:Static strings:Resources.DicePool}}" Width="*">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <ContentPresenter Content="{Binding DicePool, Converter={StaticResource ImageCollectionConverter}}"/>
+                    </DataTemplate>    
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+        </DataGrid.Columns>
+    </DataGrid>
 </UserControl>
+

@@ -15,7 +15,7 @@ namespace SessionManager.Controls
       }
 
       public static DependencyProperty AttributesDependencyProperty =
-         DependencyProperty.Register("Attributes", typeof(Attributes), typeof(AttributesHeaderControl));
+         DependencyProperty.Register(Properties.Resources.Attributes, typeof(Attributes), typeof(AttributesHeaderControl));
 
       public Attributes Attributes
       {

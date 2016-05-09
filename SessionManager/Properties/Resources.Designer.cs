@@ -170,6 +170,15 @@ namespace SessionManager.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Combat Skills.
+        /// </summary>
+        public static string Combat {
+            get {
+                return ResourceManager.GetString("Combat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Computers.
         /// </summary>
         public static string Computers {
@@ -233,6 +242,15 @@ namespace SessionManager.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dark.
+        /// </summary>
+        public static string Dark {
+            get {
+                return ResourceManager.GetString("Dark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Deception.
         /// </summary>
         public static string Deception {
@@ -251,6 +269,24 @@ namespace SessionManager.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dice.
+        /// </summary>
+        public static string Dice {
+            get {
+                return ResourceManager.GetString("Dice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dice Pool.
+        /// </summary>
+        public static string DicePool {
+            get {
+                return ResourceManager.GetString("DicePool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Discipline.
         /// </summary>
         public static string Discipline {
@@ -265,6 +301,15 @@ namespace SessionManager.Properties {
         public static string Education {
             get {
                 return ResourceManager.GetString("Education", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to General Skills.
+        /// </summary>
+        public static string General {
+            get {
+                return ResourceManager.GetString("General", resourceCulture);
             }
         }
         
@@ -310,6 +355,15 @@ namespace SessionManager.Properties {
         public static string Int {
             get {
                 return ResourceManager.GetString("Int", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Knowledge Skills.
+        /// </summary>
+        public static string Knowledge {
+            get {
+                return ResourceManager.GetString("Knowledge", resourceCulture);
             }
         }
         
@@ -446,6 +500,15 @@ namespace SessionManager.Properties {
         public static string Ranged {
             get {
                 return ResourceManager.GetString("Ranged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rank.
+        /// </summary>
+        public static string Rank {
+            get {
+                return ResourceManager.GetString("Rank", resourceCulture);
             }
         }
         

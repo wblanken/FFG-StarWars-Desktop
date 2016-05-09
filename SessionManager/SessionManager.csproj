@@ -84,6 +84,7 @@
     <Compile Include="Controls\SkillsControl.xaml.cs">
       <DependentUpon>SkillsControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\ImageCollectionConverter.cs" />
     <Compile Include="Converters\StringToUpper.cs" />
     <Compile Include="Dto\Attributes.cs" />
     <Compile Include="Dto\Character.cs" />
@@ -188,10 +189,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Proficiency.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Ability.bmp" />
+    <Resource Include="Resources\Proficiency.png" />
+    <Resource Include="Resources\Ability.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
