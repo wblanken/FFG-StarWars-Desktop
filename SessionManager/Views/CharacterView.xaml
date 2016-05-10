@@ -5,8 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:vm="clr-namespace:SessionManager.ViewModels"
              xmlns:views="clr-namespace:SessionManager.Views"
+             xmlns:sessionManager="clr-namespace:SessionManager"
              mc:Ignorable="d" 
-             d:DesignHeight="1000" d:DesignWidth="700">
+             d:DesignHeight="1000" d:DesignWidth="700"
+             d:DataContext="{d:DesignInstance Type=sessionManager:PashDemoCharacter, IsDesignTimeCreatable=True}">
     <UserControl.DataContext>
         <vm:CharacterViewModel/>
     </UserControl.DataContext>

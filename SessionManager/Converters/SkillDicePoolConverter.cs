@@ -6,7 +6,7 @@ using System.Windows.Media.Imaging;
 
 namespace SessionManager.Converters
 {
-   public class ImageCollectionConverter : IMultiValueConverter
+   public class SkillDicePoolConverter : IMultiValueConverter
    {
       public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
       {

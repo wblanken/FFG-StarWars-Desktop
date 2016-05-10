@@ -11,7 +11,7 @@
     <UserControl.Resources>
         <utility:BindingProxy x:Key="SkillNameProxy" Data="{Binding SkillListName, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:SkillListControl}}}"/>
         <utility:BindingProxy x:Key="DataProxy" Data="{Binding}"/>
-        <converters:ImageCollectionConverter x:Key="ImageCollectionConverter"/>
+        <converters:SkillDicePoolConverter x:Key="SkillDicePoolConverter"/>
         <converters:SkillNameConverter x:Key="SkillNameConverter"/>
     </UserControl.Resources>
     <DataGrid RowBackground="{StaticResource GridPaleBlue}" AlternatingRowBackground="{StaticResource TitleBeige}" 
@@ -46,10 +46,9 @@
                                              Source={x:Static strings:Resources.DicePool}}" Width="*">
                 <DataGridTemplateColumn.CellTemplate>
                     <DataTemplate>
-                        <!--<ContentPresenter Content="{Binding DicePool, Converter={StaticResource ImageCollectionConverter}}"/>-->
                         <ContentPresenter>
                             <ContentPresenter.Content>
-                                <MultiBinding Converter="{StaticResource ImageCollectionConverter}">
+                                <MultiBinding Converter="{StaticResource SkillDicePoolConverter}">
                                     <Binding Path="Rank"/>
                                     <Binding Path="CharacteristicValue"/>
                                 </MultiBinding>

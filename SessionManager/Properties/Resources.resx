@@ -254,6 +254,10 @@
     <value>Mechanics</value>
     <comment>Based on Intellect</comment>
   </data>
+  <data name="Medicine" xml:space="preserve">
+    <value>Medicine</value>
+    <comment>Based on Intellect</comment>
+  </data>
   <data name="Melee" xml:space="preserve">
     <value>Melee</value>
   </data>

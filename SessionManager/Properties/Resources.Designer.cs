@@ -413,6 +413,15 @@ namespace SessionManager.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Medicine.
+        /// </summary>
+        public static string Medicine {
+            get {
+                return ResourceManager.GetString("Medicine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Melee.
         /// </summary>
         public static string Melee {

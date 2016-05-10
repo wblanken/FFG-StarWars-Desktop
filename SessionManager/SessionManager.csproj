@@ -75,7 +75,7 @@
     <Compile Include="Controls\SkillListControl.xaml.cs">
       <DependentUpon>SkillListControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Converters\ImageCollectionConverter.cs" />
+    <Compile Include="Converters\SkillDicePoolConverter.cs" />
     <Compile Include="Converters\SkillNameConverter.cs" />
     <Compile Include="Converters\StringToUpper.cs" />
     <Compile Include="PashDemoCharacter.cs" />

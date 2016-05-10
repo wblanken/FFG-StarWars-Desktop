@@ -6,7 +6,8 @@ namespace SessionManager.ViewModels
    {
       public CharacterViewModel()
       {
-         Character = PashDemoCharacter.Pash;
+         var testData = new PashDemoCharacter();
+         Character = testData.Character;
       }
 
       public Character Character { get; set; }

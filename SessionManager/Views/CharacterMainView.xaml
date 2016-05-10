@@ -5,8 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:controls="clr-namespace:SessionManager.Controls"
              xmlns:strings="clr-namespace:SessionManager.Properties"
-             mc:Ignorable="d" Width="700"
-             d:DesignHeight="1000">
+             xmlns:sessionManager="clr-namespace:SessionManager"
+             mc:Ignorable="d" Width="750"
+             d:DataContext="{d:DesignInstance Type=sessionManager:PashDemoCharacter, IsDesignTimeCreatable=True}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="115"/>
@@ -77,10 +78,10 @@
                 <RowDefinition Height="20"/>
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
-            <Polygon Grid.Row="0" Grid.RowSpan="2" Fill="{StaticResource TitleBeige}" Width="700" Height="100"
+            <Polygon Grid.Row="0" Grid.RowSpan="2" Fill="{StaticResource TitleBeige}" Width="750" Height="100" Stretch="Fill"
                      Points="10,0 0,10 0,75 15,100 685,100 700,75 700,10 690,0"/>
             <controls:SectionHeader Grid.Row="0" Header="{x:Static strings:Resources.Characteristics}"/>
-            <Grid Grid.Row="1" Margin="15,0">
+            <Grid Grid.Row="1" Margin="10,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
@@ -104,6 +105,7 @@
             </Grid>
         </Grid>
         
+        <!-- Skills -->
         <Grid Grid.Row="4">
             <Grid.RowDefinitions>
                 <RowDefinition Height="20"/>
@@ -118,18 +120,20 @@
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="10"/>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <controls:SkillListControl Grid.Row="0" Grid.RowSpan="3" Grid.Column="0"  
+                <controls:SkillListControl Grid.Row="0" Grid.RowSpan="2" Grid.Column="0"  
                                        SkillListName="{x:Static strings:Resources.General}" 
                                        SkillList="{Binding Character.GeneralSkills}"/>
-                <controls:SkillListControl Grid.Row="0" Grid.Column="2" 
-                                       SkillListName="{x:Static strings:Resources.Combat}" 
-                                       SkillList="{Binding Character.CombatSkills}"/>
-                <controls:SkillListControl Grid.Row="2" Grid.Column="2" 
-                                       SkillListName="{x:Static strings:Resources.Knowledge}" 
-                                       SkillList="{Binding Character.KnowledgeSkills}"/>
+                <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="2" >
+                    <controls:SkillListControl Grid.Row="0" Grid.Column="2" 
+                                               SkillListName="{x:Static strings:Resources.Combat}" 
+                                               SkillList="{Binding Character.CombatSkills}"
+                                               Margin="0,0,0,20"/>
+                    <controls:SkillListControl Grid.Row="1" Grid.Column="2" 
+                                               SkillListName="{x:Static strings:Resources.Knowledge}" 
+                                               SkillList="{Binding Character.KnowledgeSkills}"/>
+                </StackPanel>
             </Grid>
         </Grid>
     </Grid>
