@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using SessionManager.Model;
+using SessionManager.Dto;
 
 namespace SessionManager
 {

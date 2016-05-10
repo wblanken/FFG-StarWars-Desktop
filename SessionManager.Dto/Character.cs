@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SessionManager.Model
+namespace SessionManager.Dto
 {
    public class Character
    {

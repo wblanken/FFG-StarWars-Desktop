@@ -12,6 +12,7 @@
         <utility:BindingProxy x:Key="SkillNameProxy" Data="{Binding SkillListName, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:SkillListControl}}}"/>
         <utility:BindingProxy x:Key="DataProxy" Data="{Binding}"/>
         <converters:ImageCollectionConverter x:Key="ImageCollectionConverter"/>
+        <converters:SkillNameConverter x:Key="SkillNameConverter"/>
     </UserControl.Resources>
     <DataGrid RowBackground="{StaticResource GridPaleBlue}" AlternatingRowBackground="{StaticResource TitleBeige}" 
               CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="False" CanUserResizeColumns="False" CanUserSortColumns="False"
@@ -27,7 +28,14 @@
         </DataGrid.ColumnHeaderStyle>
         <DataGrid.Columns>
             <DataGridTextColumn Header="{Binding Data, Source={StaticResource SkillNameProxy}, Converter={StaticResource StringToUpperConverter}}"
-                                Width="*" Binding="{Binding Name}" CanUserResize="False" CanUserSort="False"/>
+                                Width="*" CanUserResize="False" CanUserSort="False">
+                <DataGridTextColumn.Binding>
+                    <MultiBinding Converter="{StaticResource SkillNameConverter}">
+                        <Binding Path="Name"/>
+                        <Binding Path="Characteristic"/>
+                    </MultiBinding>
+                </DataGridTextColumn.Binding>
+            </DataGridTextColumn>
             <DataGridCheckBoxColumn Header="{Binding Converter={StaticResource StringToUpperConverter}, 
                                              Source={x:Static strings:Resources.Career}}"
                                     Binding="{Binding Career}"/>
@@ -38,7 +46,15 @@
                                              Source={x:Static strings:Resources.DicePool}}" Width="*">
                 <DataGridTemplateColumn.CellTemplate>
                     <DataTemplate>
-                        <ContentPresenter Content="{Binding DicePool, Converter={StaticResource ImageCollectionConverter}}"/>
+                        <!--<ContentPresenter Content="{Binding DicePool, Converter={StaticResource ImageCollectionConverter}}"/>-->
+                        <ContentPresenter>
+                            <ContentPresenter.Content>
+                                <MultiBinding Converter="{StaticResource ImageCollectionConverter}">
+                                    <Binding Path="Rank"/>
+                                    <Binding Path="CharacteristicValue"/>
+                                </MultiBinding>
+                            </ContentPresenter.Content>
+                        </ContentPresenter>
                     </DataTemplate>    
                 </DataGridTemplateColumn.CellTemplate>
             </DataGridTemplateColumn>

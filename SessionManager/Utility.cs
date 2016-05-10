@@ -1,6 +1,7 @@
 using System;
 using System.Linq.Expressions;
 using System.Windows;
+using SessionManager.Dto;
 
 namespace SessionManager
 {

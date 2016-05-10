@@ -57,7 +57,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Characteristic.cs" />
     <Compile Include="Controls\AttributeMultiControl.xaml.cs">
       <DependentUpon>AttributeMultiControl.xaml</DependentUpon>
     </Compile>
@@ -76,13 +75,9 @@
     <Compile Include="Controls\SkillListControl.xaml.cs">
       <DependentUpon>SkillListControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\SkillsControl.xaml.cs">
-      <DependentUpon>SkillsControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Converters\ImageCollectionConverter.cs" />
+    <Compile Include="Converters\SkillNameConverter.cs" />
     <Compile Include="Converters\StringToUpper.cs" />
-    <Compile Include="Model\Character.cs" />
-    <Compile Include="Model\Skill.cs" />
     <Compile Include="PashDemoCharacter.cs" />
     <Compile Include="Utility.cs" />
     <Compile Include="Properties\Annotations.cs" />
@@ -123,10 +118,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\SkillListControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\SkillsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -178,7 +169,19 @@
     <Resource Include="Resources\Proficiency.png" />
     <Resource Include="Resources\Ability.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\OggDudeData\OggDudeData.csproj">
+      <Project>{f983bd69-0d7d-45eb-84dd-f74ef958d2e5}</Project>
+      <Name>OggDudeData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SessionManager.Dto\SessionManager.Dto.csproj">
+      <Project>{3a2ade17-e6e9-4442-9435-f195d3992ad5}</Project>
+      <Name>SessionManager.Dto</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

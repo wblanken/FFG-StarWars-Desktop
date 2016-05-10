@@ -1,4 +1,4 @@
-﻿using SessionManager.Model;
+﻿using SessionManager.Dto;
 
 namespace SessionManager.ViewModels
 {

@@ -6,7 +6,7 @@
              xmlns:vm="clr-namespace:SessionManager.ViewModels"
              xmlns:views="clr-namespace:SessionManager.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="700" d:DesignWidth="700">
+             d:DesignHeight="1000" d:DesignWidth="700">
     <UserControl.DataContext>
         <vm:CharacterViewModel/>
     </UserControl.DataContext>
@@ -43,7 +43,7 @@
         </Grid>
         <TabControl Grid.Row="1">
             <TabItem Header="Main">
-                <ScrollViewer>
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
                     <views:CharacterMainView/>
                 </ScrollViewer>
             </TabItem>
