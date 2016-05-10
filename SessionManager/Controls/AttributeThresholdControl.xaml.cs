@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.ComponentModel;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace SessionManager.Controls
@@ -11,21 +12,22 @@ namespace SessionManager.Controls
       public AttributeThresholdControl()
       {
          InitializeComponent();
+         (Content as FrameworkElement).DataContext = this;
       }
 
-      public static DependencyProperty AttributeNameProperty =
+      public static readonly DependencyProperty AttributeNameProperty =
          DependencyProperty.Register("AttributeName", typeof(string), typeof(AttributeThresholdControl));
 
-      public static DependencyProperty AttributeMaxProperty =
+      public static readonly DependencyProperty AttributeMaxProperty =
          DependencyProperty.Register("AttributeMax", typeof(string), typeof(AttributeThresholdControl));
 
-      public static DependencyProperty AttributeValueNameProperty =
+      public static readonly DependencyProperty AttributeValueNameProperty =
          DependencyProperty.Register("AttributeValueName", typeof(string), typeof(AttributeThresholdControl));
 
-      public static DependencyProperty AttributeValueProperty =
+      public static readonly DependencyProperty AttributeValueProperty =
          DependencyProperty.Register("AttributeValue", typeof(int), typeof(AttributeThresholdControl));
 
-      public static DependencyProperty AttributeThresholdProperty =
+      public static readonly DependencyProperty AttributeThresholdProperty =
          DependencyProperty.Register("AttributeThreshold", typeof(int), typeof(AttributeThresholdControl));
 
       public string AttributeName
@@ -57,5 +59,14 @@ namespace SessionManager.Controls
          get { return (int)GetValue(AttributeThresholdProperty); }
          set { SetValue(AttributeThresholdProperty, value); }
       }
+
+      /*public event PropertyChangedEventHandler PropertyChanged;
+
+      private void SetValueDp(DependencyProperty property, object value,
+      [System.Runtime.CompilerServices.CallerMemberName] string p = null)
+      {
+         SetValue(property, value);
+         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(p));
+      }*/
    }
 }

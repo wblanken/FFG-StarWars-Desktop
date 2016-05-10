@@ -14,7 +14,9 @@
         <converters:ImageCollectionConverter x:Key="ImageCollectionConverter"/>
     </UserControl.Resources>
     <DataGrid RowBackground="{StaticResource GridPaleBlue}" AlternatingRowBackground="{StaticResource TitleBeige}" 
-		AutoGenerateColumns="False" ItemsSource="{Binding SkillList, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:SkillListControl}}}">
+              CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="False" CanUserResizeColumns="False" CanUserSortColumns="False"
+		      AutoGenerateColumns="False" ItemsSource="{Binding SkillList, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:SkillListControl}}}" 
+              Focusable="False" IsReadOnly="True" IsHitTestVisible="False" RowHeaderWidth="0">
         <DataGrid.ColumnHeaderStyle>
             <Style TargetType="{x:Type DataGridColumnHeader}">
                 <Setter Property="Background" Value="{StaticResource TitleRed}"/>
@@ -25,7 +27,7 @@
         </DataGrid.ColumnHeaderStyle>
         <DataGrid.Columns>
             <DataGridTextColumn Header="{Binding Data, Source={StaticResource SkillNameProxy}, Converter={StaticResource StringToUpperConverter}}"
-                                Width="*" Binding="{Binding Name}"/>
+                                Width="*" Binding="{Binding Name}" CanUserResize="False" CanUserSort="False"/>
             <DataGridCheckBoxColumn Header="{Binding Converter={StaticResource StringToUpperConverter}, 
                                              Source={x:Static strings:Resources.Career}}"
                                     Binding="{Binding Career}"/>

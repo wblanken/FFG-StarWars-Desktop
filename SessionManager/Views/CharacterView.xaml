@@ -14,7 +14,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
         <Grid HorizontalAlignment="Stretch" Margin="5,0,5,5">
@@ -37,14 +37,17 @@
                 <TextBlock Text="{Binding Character.PlayerName}"/>
                 <TextBlock Text="Career:"/>
                 <TextBlock Text="{Binding Character.Career}"/>
+                <TextBlock Text="Gender:"/>
+                <TextBlock Text="{Binding Character.Gender}"/>
             </UniformGrid>
         </Grid>
-        
         <TabControl Grid.Row="1">
             <TabItem Header="Main">
-                <views:CharacterMainView/>
+                <ScrollViewer>
+                    <views:CharacterMainView/>
+                </ScrollViewer>
             </TabItem>
-            <TabItem Header="Character"/>
+            <TabItem Header="Character" />
             <TabItem Header="Experience"/>
             <TabItem Header="Skill Trees"/>
             <TabItem Header="Inventory"/>

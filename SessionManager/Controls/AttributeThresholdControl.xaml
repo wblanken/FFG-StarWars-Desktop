@@ -49,7 +49,7 @@
                  Text="{Binding AttributeValue, Mode=TwoWay,
                         RelativeSource={RelativeSource FindAncestor, 
                         AncestorType={x:Type controls:AttributeThresholdControl}},
-                        FallbackValue=##}" Width="51"
+                        FallbackValue=##}" Width="51" 
                  TextAlignment="Center"/>
         <TextBlock FontSize="30" Canvas.Left="18" Canvas.Top="25"
                    Text="{Binding AttributeThreshold, Mode=OneWay,

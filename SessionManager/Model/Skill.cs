@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 
-namespace SessionManager.Dto
+namespace SessionManager.Model
 {
    public class Skill
    {

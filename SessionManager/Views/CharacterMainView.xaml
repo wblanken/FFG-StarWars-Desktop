@@ -4,18 +4,109 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:controls="clr-namespace:SessionManager.Controls"
+             xmlns:strings="clr-namespace:SessionManager.Properties"
              mc:Ignorable="d" Width="700"
              d:DesignHeight="1000">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="115"/>
             <RowDefinition Height="10"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="120"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>  
-        <controls:AttributesHeaderControl Grid.Row="0" Attributes="{Binding Character.Attributes}"/>
-        <controls:CharacteristicsHeaderControl Grid.Row="2" Characteristics="{Binding Character.Characteristics}"/>
-        <controls:SkillsControl Grid.Row="4" GeneralSkills="{Binding Character.GeneralSkills}"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Attributes -->
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="95"/>
+            </Grid.RowDefinitions>
+            <controls:SectionHeader Grid.Row="0" Header="{x:Static strings:Resources.Attributes}"/>
+            <Polygon Margin="0,30,0,0" Fill="{StaticResource TitleBeige}" 
+                 Grid.Row="1" Stretch="Fill"
+                 Points="0,15 15,0 685,0 700,15 700,85 685,100 15,100 0,85"/>
+            <Grid Grid.Row="1" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="145"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="145"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="145"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="145"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <controls:AttributeSingleControl Grid.Column="1" AttributeName="{x:Static strings:Resources.Soak}" 
+                                             AttributeValue="{Binding Character.Soak, Mode=OneWay, 
+                                                              FallbackValue=0}"/>
+                <Rectangle Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Center" Stroke="White" Margin="0,30,0,-10"/>
+                <Ellipse Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Center" Stroke="{StaticResource TitleBlue}" Margin="0,36,0,-5" StrokeThickness="5"/>
+                <controls:AttributeThresholdControl Grid.Column="3" AttributeName="{x:Static strings:Resources.Wounds}" 
+                                                AttributeMax="{x:Static strings:Resources.Threshold}" 
+                                                AttributeValueName="{x:Static strings:Resources.Current}"  
+                                                AttributeValue="{Binding Character.Wounds, Mode=TwoWay, 
+                                                                     FallbackValue=0}" 
+                                                AttributeThreshold="{Binding Character.WoundsThreshold, Mode=OneWay, 
+                                                                     FallbackValue=0}"/>
+                <Rectangle Grid.Column="4" VerticalAlignment="Stretch" HorizontalAlignment="Center" Stroke="White" Margin="0,30,0,-10"/>
+                <Ellipse Grid.Column="4" VerticalAlignment="Stretch" HorizontalAlignment="Center" Stroke="{StaticResource TitleBlue}" Margin="1,36,0,-5" StrokeThickness="5"/>
+                <controls:AttributeThresholdControl Grid.Column="5" AttributeName="{x:Static strings:Resources.Strain}" 
+                                                AttributeMax="{x:Static strings:Resources.Threshold}" 
+                                                AttributeValueName="{x:Static strings:Resources.Current}"
+                                                AttributeValue="{Binding Character.Strain, Mode=TwoWay, 
+                                                                     FallbackValue=0}" 
+                                                AttributeThreshold="{Binding Character.StrainThreshold, Mode=OneWay, 
+                                                                     FallbackValue=0}"/>
+                <Rectangle Grid.Column="6" VerticalAlignment="Stretch" HorizontalAlignment="Center" Stroke="White" Margin="0,30,0,-10"/>
+                <Ellipse Grid.Column="6" VerticalAlignment="Stretch" HorizontalAlignment="Center" Stroke="{StaticResource TitleBlue}" Margin="0,36,0,-5" StrokeThickness="5"/>
+                <controls:AttributeMultiControl Grid.Column="7" AttributeName="{x:Static strings:Resources.Defense}" 
+                                            AttributeLeftName="{x:Static strings:Resources.Ranged}" 
+                                            AttributeRightName="{x:Static strings:Resources.Melee}"
+                                            AttributeLeftValue="{Binding Character.MeleeDefense, Mode=OneWay, 
+                                                                 FallbackValue=0}"
+                                            AttributeRightValue="{Binding Character.RangedDefense, Mode=OneWay, 
+                                                                  FallbackValue=0}"/>
+            </Grid>
+        </Grid>
+        
+        <!-- Characteristics -->
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <Polygon Grid.Row="0" Grid.RowSpan="2" Fill="{StaticResource TitleBeige}" Width="700" Height="100"
+                     Points="10,0 0,10 0,75 15,100 685,100 700,75 700,10 690,0"/>
+            <controls:SectionHeader Grid.Row="0" Header="{x:Static strings:Resources.Characteristics}"/>
+            <Grid Grid.Row="1" Margin="15,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <controls:CharacteristicControl Grid.Column="0" CharacteristicName="{x:Static strings:Resources.Br}" 
+                                            CharacteristicValue="{Binding Path=Character.Brawn, FallbackValue=0}"/>
+                <controls:CharacteristicControl Grid.Column="1" CharacteristicName="{x:Static strings:Resources.Ag}" 
+                                            CharacteristicValue="{Binding Path=Character.Agility, FallbackValue=0}"/>
+                <controls:CharacteristicControl Grid.Column="2" CharacteristicName="{x:Static strings:Resources.Int}" 
+                                            CharacteristicValue="{Binding Path=Character.Intellect, FallbackValue=0}"/>
+                <controls:CharacteristicControl Grid.Column="3" CharacteristicName="{x:Static strings:Resources.Cun}" 
+                                            CharacteristicValue="{Binding Path=Character.Cunning, FallbackValue=0}"/>
+                <controls:CharacteristicControl Grid.Column="4" CharacteristicName="{x:Static strings:Resources.Wil}" 
+                                            CharacteristicValue="{Binding Path=Character.Willpower, FallbackValue=0}"/>
+                <controls:CharacteristicControl Grid.Column="5" CharacteristicName="{x:Static strings:Resources.Pr}" 
+                                            CharacteristicValue="{Binding Path=Character.Presence, FallbackValue=0}"/>
+            </Grid>
+        </Grid>
+        
+        <controls:SkillsControl Grid.Row="4" 
+                                GeneralSkills="{Binding Character.GeneralSkills}" 
+                                CombatSkills="{Binding Character.CombatSkills}" 
+                                KnowledgeSkills="{Binding Character.KnowledgeSkills}"/>
     </Grid>
 </UserControl>

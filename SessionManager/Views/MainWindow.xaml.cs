@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
+using SessionManager.ViewModels;
 
 namespace SessionManager.Views
 {
@@ -10,6 +12,13 @@ namespace SessionManager.Views
       public MainWindow()
       {
          InitializeComponent();
+         DataContext = new MainWindowViewModel();
+      }
+
+      protected override void OnInitialized(EventArgs e)
+      {
+         base.OnInitialized(e);
+         ((MainWindowViewModel) DataContext).ImportData();
       }
    }
 }

@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
@@ -60,9 +61,6 @@
     <Compile Include="Controls\AttributeMultiControl.xaml.cs">
       <DependentUpon>AttributeMultiControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\AttributesHeaderControl.xaml.cs">
-      <DependentUpon>AttributesHeaderControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Controls\AttributeSingleControl.xaml.cs">
       <DependentUpon>AttributeSingleControl.xaml</DependentUpon>
     </Compile>
@@ -71,9 +69,6 @@
     </Compile>
     <Compile Include="Controls\CharacteristicControl.xaml.cs">
       <DependentUpon>CharacteristicControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\CharacteristicsHeaderControl.xaml.cs">
-      <DependentUpon>CharacteristicsHeaderControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\SectionHeader.xaml.cs">
       <DependentUpon>SectionHeader.xaml</DependentUpon>
@@ -86,10 +81,9 @@
     </Compile>
     <Compile Include="Converters\ImageCollectionConverter.cs" />
     <Compile Include="Converters\StringToUpper.cs" />
-    <Compile Include="Dto\Attributes.cs" />
-    <Compile Include="Dto\Character.cs" />
-    <Compile Include="Dto\Characteristics.cs" />
-    <Compile Include="Dto\Skill.cs" />
+    <Compile Include="Model\Character.cs" />
+    <Compile Include="Model\Skill.cs" />
+    <Compile Include="PashDemoCharacter.cs" />
     <Compile Include="Utility.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModels\CharacterViewModel.cs" />
@@ -112,10 +106,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Controls\AttributesHeaderControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Controls\AttributeSingleControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -125,10 +115,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\CharacteristicControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\CharacteristicsHeaderControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -192,6 +178,7 @@
     <Resource Include="Resources\Proficiency.png" />
     <Resource Include="Resources\Ability.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
