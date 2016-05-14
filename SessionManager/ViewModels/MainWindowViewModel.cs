@@ -17,6 +17,7 @@ namespace SessionManager.ViewModels
       public ICommand EncounterCommand { get; set; }
 
       public void ImportData()
-      {}
+      {
+      }
    }
 }

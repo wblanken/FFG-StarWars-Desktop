@@ -21,7 +21,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -366,7 +366,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -475,7 +475,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -548,7 +548,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -731,7 +731,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -822,7 +822,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -914,7 +914,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -1014,7 +1014,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -1097,7 +1097,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -1179,7 +1179,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -1270,7 +1270,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -1442,7 +1442,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -1497,7 +1497,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -1588,7 +1588,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -1643,7 +1643,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -1734,7 +1734,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -1762,7 +1762,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -1934,28 +1934,28 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
    public partial class CharacterAttributes
    {
 
-      private CharacterAttributesSoakValue soakValueField;
+      private CharacterAttributesValue soakValueField;
 
-      private CharacterAttributesWoundThreshold woundThresholdField;
+      private CharacterAttributesValue woundThresholdField;
 
-      private CharacterAttributesStrainThreshold strainThresholdField;
+      private CharacterAttributesValue strainThresholdField;
 
-      private CharacterAttributesDefenseRanged defenseRangedField;
+      private CharacterAttributesValue defenseRangedField;
 
-      private CharacterAttributesDefenseMelee defenseMeleeField;
+      private CharacterAttributesValue defenseMeleeField;
 
-      private CharacterAttributesForceRating forceRatingField;
+      private CharacterAttributesValue forceRatingField;
 
       /// <remarks/>
       [XmlElement("SoakValue")]
-      public CharacterAttributesSoakValue SoakValue
+      public CharacterAttributesValue SoakValue
       {
          get { return this.soakValueField; }
          set { this.soakValueField = value; }
@@ -1963,7 +1963,7 @@ namespace OggDudeData.Model
 
       /// <remarks/>
       [XmlElement("WoundThreshold")]
-      public CharacterAttributesWoundThreshold WoundThreshold
+      public CharacterAttributesValue WoundThreshold
       {
          get { return this.woundThresholdField; }
          set { this.woundThresholdField = value; }
@@ -1971,7 +1971,7 @@ namespace OggDudeData.Model
 
       /// <remarks/>
       [XmlElement("StrainThreshold")]
-      public CharacterAttributesStrainThreshold StrainThreshold
+      public CharacterAttributesValue StrainThreshold
       {
          get { return this.strainThresholdField; }
          set { this.strainThresholdField = value; }
@@ -1979,7 +1979,7 @@ namespace OggDudeData.Model
 
       /// <remarks/>
       [XmlElement("DefenseRanged")]
-      public CharacterAttributesDefenseRanged DefenseRanged
+      public CharacterAttributesValue DefenseRanged
       {
          get { return this.defenseRangedField; }
          set { this.defenseRangedField = value; }
@@ -1987,7 +1987,7 @@ namespace OggDudeData.Model
 
       /// <remarks/>
       [XmlElement("DefenseMelee")]
-      public CharacterAttributesDefenseMelee DefenseMelee
+      public CharacterAttributesValue DefenseMelee
       {
          get { return this.defenseMeleeField; }
          set { this.defenseMeleeField = value; }
@@ -1995,7 +1995,7 @@ namespace OggDudeData.Model
 
       /// <remarks/>
       [XmlElement("ForceRating")]
-      public CharacterAttributesForceRating ForceRating
+      public CharacterAttributesValue ForceRating
       {
          get { return this.forceRatingField; }
          set { this.forceRatingField = value; }
@@ -2004,185 +2004,12 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
-   public partial class CharacterAttributesSoakValue
+   public partial class CharacterAttributesValue
    {
-
-      private bool forSkillsField;
-
-      private bool forCharsField;
-
-      private byte startingRanksField;
-
-      private byte speciesRanksField;
-
-      private byte careerRanksField;
-
-      private byte talentRanksField;
-
-      private byte obligationRanksField;
-
-      private byte dutyRanksField;
-
-      private byte attachRanksField;
-
-      private byte itemRanksField;
-
-      private byte cyberRanksField;
-
-      private byte purchasedRanksField;
-
-      private byte charRanksField;
-
-      private byte injuryRanksField;
-
-      private byte nonCareerRanksField;
-
-      private byte grantRanksField;
-
-      private byte defWeaponRanksField;
-
-      private byte defWeaponAttachRanksField;
-
-      /// <remarks/>
-      public bool ForSkills
-      {
-         get { return this.forSkillsField; }
-         set { this.forSkillsField = value; }
-      }
-
-      /// <remarks/>
-      public bool ForChars
-      {
-         get { return this.forCharsField; }
-         set { this.forCharsField = value; }
-      }
-
-      /// <remarks/>
-      public byte StartingRanks
-      {
-         get { return this.startingRanksField; }
-         set { this.startingRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte SpeciesRanks
-      {
-         get { return this.speciesRanksField; }
-         set { this.speciesRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte CareerRanks
-      {
-         get { return this.careerRanksField; }
-         set { this.careerRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte TalentRanks
-      {
-         get { return this.talentRanksField; }
-         set { this.talentRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte ObligationRanks
-      {
-         get { return this.obligationRanksField; }
-         set { this.obligationRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte DutyRanks
-      {
-         get { return this.dutyRanksField; }
-         set { this.dutyRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte AttachRanks
-      {
-         get { return this.attachRanksField; }
-         set { this.attachRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte ItemRanks
-      {
-         get { return this.itemRanksField; }
-         set { this.itemRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte CyberRanks
-      {
-         get { return this.cyberRanksField; }
-         set { this.cyberRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte PurchasedRanks
-      {
-         get { return this.purchasedRanksField; }
-         set { this.purchasedRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte CharRanks
-      {
-         get { return this.charRanksField; }
-         set { this.charRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte InjuryRanks
-      {
-         get { return this.injuryRanksField; }
-         set { this.injuryRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte NonCareerRanks
-      {
-         get { return this.nonCareerRanksField; }
-         set { this.nonCareerRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte GrantRanks
-      {
-         get { return this.grantRanksField; }
-         set { this.grantRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte DefWeaponRanks
-      {
-         get { return this.defWeaponRanksField; }
-         set { this.defWeaponRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte DefWeaponAttachRanks
-      {
-         get { return this.defWeaponAttachRanksField; }
-         set { this.defWeaponAttachRanksField = value; }
-      }
-   }
-
-   /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
-   [System.Diagnostics.DebuggerStepThrough()]
-   [System.ComponentModel.DesignerCategory("code")]
-   [XmlType(AnonymousType = true)]
-   public partial class CharacterAttributesWoundThreshold
-   {
-
       private bool forSkillsField;
 
       private bool forCharsField;
@@ -2349,749 +2176,18 @@ namespace OggDudeData.Model
       {
          get
          {
-            return startingRanksField + speciesRanksField + careerRanksField + talentRanksField + obligationRanksField +
-                   dutyRanksField + attachRanksField + itemRanksField + cyberRanksField + purchasedRanksField +
-                   charRanksField + injuryRanksField + nonCareerRanksField + grantRanksField + defWeaponRanksField +
-                   defWeaponAttachRanksField;
+            return
+               startingRanksField + speciesRanksField + careerRanksField + talentRanksField + obligationRanksField +
+               dutyRanksField + attachRanksField + itemRanksField + cyberRanksField + purchasedRanksField +
+               charRanksField + injuryRanksField + nonCareerRanksField + grantRanksField + defWeaponRanksField +
+               defWeaponAttachRanksField;
          }
       }
    }
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
-   [System.Diagnostics.DebuggerStepThrough()]
-   [System.ComponentModel.DesignerCategory("code")]
-   [XmlType(AnonymousType = true)]
-   public partial class CharacterAttributesStrainThreshold
-   {
-
-      private bool forSkillsField;
-
-      private bool forCharsField;
-
-      private byte startingRanksField;
-
-      private byte speciesRanksField;
-
-      private byte careerRanksField;
-
-      private byte talentRanksField;
-
-      private byte obligationRanksField;
-
-      private byte dutyRanksField;
-
-      private byte attachRanksField;
-
-      private byte itemRanksField;
-
-      private byte cyberRanksField;
-
-      private byte purchasedRanksField;
-
-      private byte charRanksField;
-
-      private byte injuryRanksField;
-
-      private byte nonCareerRanksField;
-
-      private byte grantRanksField;
-
-      private byte defWeaponRanksField;
-
-      private byte defWeaponAttachRanksField;
-
-      /// <remarks/>
-      public bool ForSkills
-      {
-         get { return this.forSkillsField; }
-         set { this.forSkillsField = value; }
-      }
-
-      /// <remarks/>
-      public bool ForChars
-      {
-         get { return this.forCharsField; }
-         set { this.forCharsField = value; }
-      }
-
-      /// <remarks/>
-      public byte StartingRanks
-      {
-         get { return this.startingRanksField; }
-         set { this.startingRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte SpeciesRanks
-      {
-         get { return this.speciesRanksField; }
-         set { this.speciesRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte CareerRanks
-      {
-         get { return this.careerRanksField; }
-         set { this.careerRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte TalentRanks
-      {
-         get { return this.talentRanksField; }
-         set { this.talentRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte ObligationRanks
-      {
-         get { return this.obligationRanksField; }
-         set { this.obligationRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte DutyRanks
-      {
-         get { return this.dutyRanksField; }
-         set { this.dutyRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte AttachRanks
-      {
-         get { return this.attachRanksField; }
-         set { this.attachRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte ItemRanks
-      {
-         get { return this.itemRanksField; }
-         set { this.itemRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte CyberRanks
-      {
-         get { return this.cyberRanksField; }
-         set { this.cyberRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte PurchasedRanks
-      {
-         get { return this.purchasedRanksField; }
-         set { this.purchasedRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte CharRanks
-      {
-         get { return this.charRanksField; }
-         set { this.charRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte InjuryRanks
-      {
-         get { return this.injuryRanksField; }
-         set { this.injuryRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte NonCareerRanks
-      {
-         get { return this.nonCareerRanksField; }
-         set { this.nonCareerRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte GrantRanks
-      {
-         get { return this.grantRanksField; }
-         set { this.grantRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte DefWeaponRanks
-      {
-         get { return this.defWeaponRanksField; }
-         set { this.defWeaponRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte DefWeaponAttachRanks
-      {
-         get { return this.defWeaponAttachRanksField; }
-         set { this.defWeaponAttachRanksField = value; }
-      }
-
-      public int Total
-      {
-         get
-         {
-            return startingRanksField + speciesRanksField + careerRanksField + talentRanksField + obligationRanksField +
-                   dutyRanksField + attachRanksField + itemRanksField + cyberRanksField + purchasedRanksField +
-                   charRanksField + injuryRanksField + nonCareerRanksField + grantRanksField + defWeaponRanksField +
-                   defWeaponAttachRanksField;
-         }
-      }
-   }
-
-   /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
-   [System.Diagnostics.DebuggerStepThrough()]
-   [System.ComponentModel.DesignerCategory("code")]
-   [XmlType(AnonymousType = true)]
-   public partial class CharacterAttributesDefenseRanged
-   {
-
-      private bool forSkillsField;
-
-      private bool forCharsField;
-
-      private byte startingRanksField;
-
-      private byte speciesRanksField;
-
-      private byte careerRanksField;
-
-      private byte talentRanksField;
-
-      private byte obligationRanksField;
-
-      private byte dutyRanksField;
-
-      private byte attachRanksField;
-
-      private byte itemRanksField;
-
-      private byte cyberRanksField;
-
-      private byte purchasedRanksField;
-
-      private byte charRanksField;
-
-      private byte injuryRanksField;
-
-      private byte nonCareerRanksField;
-
-      private byte grantRanksField;
-
-      private byte defWeaponRanksField;
-
-      private byte defWeaponAttachRanksField;
-
-      /// <remarks/>
-      public bool ForSkills
-      {
-         get { return this.forSkillsField; }
-         set { this.forSkillsField = value; }
-      }
-
-      /// <remarks/>
-      public bool ForChars
-      {
-         get { return this.forCharsField; }
-         set { this.forCharsField = value; }
-      }
-
-      /// <remarks/>
-      public byte StartingRanks
-      {
-         get { return this.startingRanksField; }
-         set { this.startingRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte SpeciesRanks
-      {
-         get { return this.speciesRanksField; }
-         set { this.speciesRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte CareerRanks
-      {
-         get { return this.careerRanksField; }
-         set { this.careerRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte TalentRanks
-      {
-         get { return this.talentRanksField; }
-         set { this.talentRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte ObligationRanks
-      {
-         get { return this.obligationRanksField; }
-         set { this.obligationRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte DutyRanks
-      {
-         get { return this.dutyRanksField; }
-         set { this.dutyRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte AttachRanks
-      {
-         get { return this.attachRanksField; }
-         set { this.attachRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte ItemRanks
-      {
-         get { return this.itemRanksField; }
-         set { this.itemRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte CyberRanks
-      {
-         get { return this.cyberRanksField; }
-         set { this.cyberRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte PurchasedRanks
-      {
-         get { return this.purchasedRanksField; }
-         set { this.purchasedRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte CharRanks
-      {
-         get { return this.charRanksField; }
-         set { this.charRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte InjuryRanks
-      {
-         get { return this.injuryRanksField; }
-         set { this.injuryRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte NonCareerRanks
-      {
-         get { return this.nonCareerRanksField; }
-         set { this.nonCareerRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte GrantRanks
-      {
-         get { return this.grantRanksField; }
-         set { this.grantRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte DefWeaponRanks
-      {
-         get { return this.defWeaponRanksField; }
-         set { this.defWeaponRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte DefWeaponAttachRanks
-      {
-         get { return this.defWeaponAttachRanksField; }
-         set { this.defWeaponAttachRanksField = value; }
-      }
-
-      public int Total
-      {
-         get
-         {
-            return startingRanksField + speciesRanksField + careerRanksField + talentRanksField + obligationRanksField +
-                   dutyRanksField + attachRanksField + itemRanksField + cyberRanksField + purchasedRanksField +
-                   charRanksField + injuryRanksField + nonCareerRanksField + grantRanksField + defWeaponRanksField +
-                   defWeaponAttachRanksField;
-         }
-      }
-   }
-
-   /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
-   [System.Diagnostics.DebuggerStepThrough()]
-   [System.ComponentModel.DesignerCategory("code")]
-   [XmlType(AnonymousType = true)]
-   public partial class CharacterAttributesDefenseMelee
-   {
-
-      private bool forSkillsField;
-
-      private bool forCharsField;
-
-      private byte startingRanksField;
-
-      private byte speciesRanksField;
-
-      private byte careerRanksField;
-
-      private byte talentRanksField;
-
-      private byte obligationRanksField;
-
-      private byte dutyRanksField;
-
-      private byte attachRanksField;
-
-      private byte itemRanksField;
-
-      private byte cyberRanksField;
-
-      private byte purchasedRanksField;
-
-      private byte charRanksField;
-
-      private byte injuryRanksField;
-
-      private byte nonCareerRanksField;
-
-      private byte grantRanksField;
-
-      private byte defWeaponRanksField;
-
-      private byte defWeaponAttachRanksField;
-
-      /// <remarks/>
-      public bool ForSkills
-      {
-         get { return this.forSkillsField; }
-         set { this.forSkillsField = value; }
-      }
-
-      /// <remarks/>
-      public bool ForChars
-      {
-         get { return this.forCharsField; }
-         set { this.forCharsField = value; }
-      }
-
-      /// <remarks/>
-      public byte StartingRanks
-      {
-         get { return this.startingRanksField; }
-         set { this.startingRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte SpeciesRanks
-      {
-         get { return this.speciesRanksField; }
-         set { this.speciesRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte CareerRanks
-      {
-         get { return this.careerRanksField; }
-         set { this.careerRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte TalentRanks
-      {
-         get { return this.talentRanksField; }
-         set { this.talentRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte ObligationRanks
-      {
-         get { return this.obligationRanksField; }
-         set { this.obligationRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte DutyRanks
-      {
-         get { return this.dutyRanksField; }
-         set { this.dutyRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte AttachRanks
-      {
-         get { return this.attachRanksField; }
-         set { this.attachRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte ItemRanks
-      {
-         get { return this.itemRanksField; }
-         set { this.itemRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte CyberRanks
-      {
-         get { return this.cyberRanksField; }
-         set { this.cyberRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte PurchasedRanks
-      {
-         get { return this.purchasedRanksField; }
-         set { this.purchasedRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte CharRanks
-      {
-         get { return this.charRanksField; }
-         set { this.charRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte InjuryRanks
-      {
-         get { return this.injuryRanksField; }
-         set { this.injuryRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte NonCareerRanks
-      {
-         get { return this.nonCareerRanksField; }
-         set { this.nonCareerRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte GrantRanks
-      {
-         get { return this.grantRanksField; }
-         set { this.grantRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte DefWeaponRanks
-      {
-         get { return this.defWeaponRanksField; }
-         set { this.defWeaponRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte DefWeaponAttachRanks
-      {
-         get { return this.defWeaponAttachRanksField; }
-         set { this.defWeaponAttachRanksField = value; }
-      }
-
-      public int Total
-      {
-         get
-         {
-            return startingRanksField + speciesRanksField + careerRanksField + talentRanksField + obligationRanksField +
-                   dutyRanksField + attachRanksField + itemRanksField + cyberRanksField + purchasedRanksField +
-                   charRanksField + injuryRanksField + nonCareerRanksField + grantRanksField + defWeaponRanksField +
-                   defWeaponAttachRanksField;
-         }
-      }
-   }
-
-   /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
-   [System.Diagnostics.DebuggerStepThrough()]
-   [System.ComponentModel.DesignerCategory("code")]
-   [XmlType(AnonymousType = true)]
-   public partial class CharacterAttributesForceRating
-   {
-
-      private bool forSkillsField;
-
-      private bool forCharsField;
-
-      private byte startingRanksField;
-
-      private byte speciesRanksField;
-
-      private byte careerRanksField;
-
-      private byte talentRanksField;
-
-      private byte obligationRanksField;
-
-      private byte dutyRanksField;
-
-      private byte attachRanksField;
-
-      private byte itemRanksField;
-
-      private byte cyberRanksField;
-
-      private byte purchasedRanksField;
-
-      private byte charRanksField;
-
-      private byte injuryRanksField;
-
-      private byte nonCareerRanksField;
-
-      private byte grantRanksField;
-
-      private byte defWeaponRanksField;
-
-      private byte defWeaponAttachRanksField;
-
-      /// <remarks/>
-      public bool ForSkills
-      {
-         get { return this.forSkillsField; }
-         set { this.forSkillsField = value; }
-      }
-
-      /// <remarks/>
-      public bool ForChars
-      {
-         get { return this.forCharsField; }
-         set { this.forCharsField = value; }
-      }
-
-      /// <remarks/>
-      public byte StartingRanks
-      {
-         get { return this.startingRanksField; }
-         set { this.startingRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte SpeciesRanks
-      {
-         get { return this.speciesRanksField; }
-         set { this.speciesRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte CareerRanks
-      {
-         get { return this.careerRanksField; }
-         set { this.careerRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte TalentRanks
-      {
-         get { return this.talentRanksField; }
-         set { this.talentRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte ObligationRanks
-      {
-         get { return this.obligationRanksField; }
-         set { this.obligationRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte DutyRanks
-      {
-         get { return this.dutyRanksField; }
-         set { this.dutyRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte AttachRanks
-      {
-         get { return this.attachRanksField; }
-         set { this.attachRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte ItemRanks
-      {
-         get { return this.itemRanksField; }
-         set { this.itemRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte CyberRanks
-      {
-         get { return this.cyberRanksField; }
-         set { this.cyberRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte PurchasedRanks
-      {
-         get { return this.purchasedRanksField; }
-         set { this.purchasedRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte CharRanks
-      {
-         get { return this.charRanksField; }
-         set { this.charRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte InjuryRanks
-      {
-         get { return this.injuryRanksField; }
-         set { this.injuryRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte NonCareerRanks
-      {
-         get { return this.nonCareerRanksField; }
-         set { this.nonCareerRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte GrantRanks
-      {
-         get { return this.grantRanksField; }
-         set { this.grantRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte DefWeaponRanks
-      {
-         get { return this.defWeaponRanksField; }
-         set { this.defWeaponRanksField = value; }
-      }
-
-      /// <remarks/>
-      public byte DefWeaponAttachRanks
-      {
-         get { return this.defWeaponAttachRanksField; }
-         set { this.defWeaponAttachRanksField = value; }
-      }
-
-      public int Total
-      {
-         get
-         {
-            return startingRanksField + speciesRanksField + careerRanksField + talentRanksField + obligationRanksField +
-                   dutyRanksField + attachRanksField + itemRanksField + cyberRanksField + purchasedRanksField +
-                   charRanksField + injuryRanksField + nonCareerRanksField + grantRanksField + defWeaponRanksField +
-                   defWeaponAttachRanksField;
-         }
-      }
-   }
-
-   /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -3147,7 +2243,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -3229,7 +2325,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -3302,7 +2398,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -3384,7 +2480,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -3466,7 +2562,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -3548,7 +2644,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -3567,7 +2663,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -3649,7 +2745,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -3731,7 +2827,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -3779,7 +2875,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -3798,7 +2894,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -3817,7 +2913,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -3836,7 +2932,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -4009,7 +3105,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -4154,7 +3250,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -4173,7 +3269,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -4309,7 +3405,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -4328,7 +3424,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -4473,7 +3569,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -4609,7 +3705,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -4628,7 +3724,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -4773,7 +3869,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -4819,7 +3915,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -4865,7 +3961,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -4884,7 +3980,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -4903,7 +3999,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -4949,7 +4045,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -5031,7 +4127,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]
@@ -5077,7 +4173,7 @@ namespace OggDudeData.Model
 
    /// <remarks/>
    [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.33440")]
-   [System.Serializable()]
+   [Serializable()]
    [System.Diagnostics.DebuggerStepThrough()]
    [System.ComponentModel.DesignerCategory("code")]
    [XmlType(AnonymousType = true)]

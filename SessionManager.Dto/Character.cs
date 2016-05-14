@@ -28,6 +28,7 @@ namespace SessionManager.Dto
       public int Strain { get; set; }
       public int RangedDefense { get; set; }
       public int MeleeDefense { get; set; }
+      public int ForceRating { get; set; }
 
       // Skills
       public List<Skill> GeneralSkills { get; set; }

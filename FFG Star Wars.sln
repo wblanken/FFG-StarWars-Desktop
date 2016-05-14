@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OggDudeData", "OggDudeData\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionManager.Dto", "SessionManager.Dto\SessionManager.Dto.csproj", "{3A2ADE17-E6E9-4442-9435-F195D3992AD5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test Importer", "Test Importer\Test Importer.csproj", "{D4C8C399-3CBE-48B9-9A91-3CBEED6EBEC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionManager.Data", "SessionManager.Data\SessionManager.Data.csproj", "{FE842843-4D69-4F63-ABDE-C2979D0CAB6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{3A2ADE17-E6E9-4442-9435-F195D3992AD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A2ADE17-E6E9-4442-9435-F195D3992AD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A2ADE17-E6E9-4442-9435-F195D3992AD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4C8C399-3CBE-48B9-9A91-3CBEED6EBEC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4C8C399-3CBE-48B9-9A91-3CBEED6EBEC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4C8C399-3CBE-48B9-9A91-3CBEED6EBEC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4C8C399-3CBE-48B9-9A91-3CBEED6EBEC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE842843-4D69-4F63-ABDE-C2979D0CAB6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE842843-4D69-4F63-ABDE-C2979D0CAB6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE842843-4D69-4F63-ABDE-C2979D0CAB6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE842843-4D69-4F63-ABDE-C2979D0CAB6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
