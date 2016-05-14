@@ -1,12 +1,19 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   public partial class CharacterGrants {
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   public class CharacterGrants {
     
       private string useGrantsField;
     
@@ -25,90 +32,90 @@ namespace OggDudeData.Model.Character
       private string talentCharStrainField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string UseGrants {
          get {
-            return this.useGrantsField;
+            return useGrantsField;
          }
          set {
-            this.useGrantsField = value;
+            useGrantsField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string FreeSpecs {
          get {
-            return this.freeSpecsField;
+            return freeSpecsField;
          }
          set {
-            this.freeSpecsField = value;
+            freeSpecsField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string FreeSkills {
          get {
-            return this.freeSkillsField;
+            return freeSkillsField;
          }
          set {
-            this.freeSkillsField = value;
+            freeSkillsField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string FreeTalents {
          get {
-            return this.freeTalentsField;
+            return freeTalentsField;
          }
          set {
-            this.freeTalentsField = value;
+            freeTalentsField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string FreeFR {
          get {
-            return this.freeFRField;
+            return freeFRField;
          }
          set {
-            this.freeFRField = value;
+            freeFRField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string FreeFRCount {
          get {
-            return this.freeFRCountField;
+            return freeFRCountField;
          }
          set {
-            this.freeFRCountField = value;
+            freeFRCountField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string TalentCharWound {
          get {
-            return this.talentCharWoundField;
+            return talentCharWoundField;
          }
          set {
-            this.talentCharWoundField = value;
+            talentCharWoundField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string TalentCharStrain {
          get {
-            return this.talentCharStrainField;
+            return talentCharStrainField;
          }
          set {
-            this.talentCharStrainField = value;
+            talentCharStrainField = value;
          }
       }
    }

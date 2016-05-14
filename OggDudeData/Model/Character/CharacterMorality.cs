@@ -1,12 +1,19 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   public partial class CharacterMorality {
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   public class CharacterMorality {
     
       private string moralityPairsField;
     
@@ -17,46 +24,46 @@ namespace OggDudeData.Model.Character
       private CharacterMoralityOptions[] optionsField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string MoralityPairs {
          get {
-            return this.moralityPairsField;
+            return moralityPairsField;
          }
          set {
-            this.moralityPairsField = value;
+            moralityPairsField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string ModifiedMorality {
          get {
-            return this.modifiedMoralityField;
+            return modifiedMoralityField;
          }
          set {
-            this.modifiedMoralityField = value;
+            modifiedMoralityField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string MoralityValue {
          get {
-            return this.moralityValueField;
+            return moralityValueField;
          }
          set {
-            this.moralityValueField = value;
+            moralityValueField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("Options", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement("Options", Form=XmlSchemaForm.Unqualified)]
       public CharacterMoralityOptions[] Options {
          get {
-            return this.optionsField;
+            return optionsField;
          }
          set {
-            this.optionsField = value;
+            optionsField = value;
          }
       }
    }

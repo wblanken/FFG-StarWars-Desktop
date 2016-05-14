@@ -1,12 +1,19 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   public partial class CharacterSpeciesSelectedOptionsCharOptionStartingAttribs {
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   public class CharacterSpeciesSelectedOptionsCharOptionStartingAttribs {
     
       private string woundThresholdField;
     
@@ -25,90 +32,90 @@ namespace OggDudeData.Model.Character
       private Requirement[] requirementField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string WoundThreshold {
          get {
-            return this.woundThresholdField;
+            return woundThresholdField;
          }
          set {
-            this.woundThresholdField = value;
+            woundThresholdField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string StrainThreshold {
          get {
-            return this.strainThresholdField;
+            return strainThresholdField;
          }
          set {
-            this.strainThresholdField = value;
+            strainThresholdField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string DefenseRanged {
          get {
-            return this.defenseRangedField;
+            return defenseRangedField;
          }
          set {
-            this.defenseRangedField = value;
+            defenseRangedField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string DefenseMelee {
          get {
-            return this.defenseMeleeField;
+            return defenseMeleeField;
          }
          set {
-            this.defenseMeleeField = value;
+            defenseMeleeField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string SoakValue {
          get {
-            return this.soakValueField;
+            return soakValueField;
          }
          set {
-            this.soakValueField = value;
+            soakValueField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Experience {
          get {
-            return this.experienceField;
+            return experienceField;
          }
          set {
-            this.experienceField = value;
+            experienceField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string ForceRating {
          get {
-            return this.forceRatingField;
+            return forceRatingField;
          }
          set {
-            this.forceRatingField = value;
+            forceRatingField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("Requirement")]
+      [XmlElement("Requirement")]
       public Requirement[] Requirement {
          get {
-            return this.requirementField;
+            return requirementField;
          }
          set {
-            this.requirementField = value;
+            requirementField = value;
          }
       }
    }

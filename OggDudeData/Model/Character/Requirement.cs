@@ -13,15 +13,22 @@
 // 
 
 
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   [System.Xml.Serialization.XmlRootAttribute(Namespace="", IsNullable=false)]
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable()]
+   [DebuggerStepThrough()]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   [XmlRoot(Namespace="", IsNullable=false)]
    public partial class Requirement {
     
       private string wearingArmorField;
@@ -41,7 +48,7 @@ namespace OggDudeData.Model.Character
       private string wieldingLightsaberField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string WearingArmor {
          get {
             return this.wearingArmorField;
@@ -52,7 +59,7 @@ namespace OggDudeData.Model.Character
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Career {
          get {
             return this.careerField;
@@ -63,7 +70,7 @@ namespace OggDudeData.Model.Character
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Specialization {
          get {
             return this.specializationField;
@@ -74,7 +81,7 @@ namespace OggDudeData.Model.Character
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string NonCareer {
          get {
             return this.nonCareerField;
@@ -85,7 +92,7 @@ namespace OggDudeData.Model.Character
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string SoakAtLeast {
          get {
             return this.soakAtLeastField;
@@ -96,7 +103,7 @@ namespace OggDudeData.Model.Character
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string WieldingMelee {
          get {
             return this.wieldingMeleeField;
@@ -107,7 +114,7 @@ namespace OggDudeData.Model.Character
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string WieldingBrawl {
          get {
             return this.wieldingBrawlField;
@@ -118,7 +125,7 @@ namespace OggDudeData.Model.Character
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string WieldingLightsaber {
          get {
             return this.wieldingLightsaberField;

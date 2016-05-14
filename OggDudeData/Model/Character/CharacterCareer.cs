@@ -1,64 +1,71 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   public partial class CharacterCareer {
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   public class CharacterCareer {
     
       private string careerKeyField;
     
       private string startingSpecKeyField;
     
-      private Key[][] careerSkillsField;
+      private Key[] careerSkillsField;
     
-      private Key[][] careerSpecSkillsField;
+      private Key[] careerSpecSkillsField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string CareerKey {
          get {
-            return this.careerKeyField;
+            return careerKeyField;
          }
          set {
-            this.careerKeyField = value;
+            careerKeyField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string StartingSpecKey {
          get {
-            return this.startingSpecKeyField;
+            return startingSpecKeyField;
          }
          set {
-            this.startingSpecKeyField = value;
+            startingSpecKeyField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      [System.Xml.Serialization.XmlArrayItemAttribute("Key", typeof(Key))]
-      public Key[][] CareerSkills {
+      [XmlArray(Form=XmlSchemaForm.Unqualified)]
+      [XmlArrayItem("Key", typeof(Key))]
+      public Key[] CareerSkills {
          get {
-            return this.careerSkillsField;
+            return careerSkillsField;
          }
          set {
-            this.careerSkillsField = value;
+            careerSkillsField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      [System.Xml.Serialization.XmlArrayItemAttribute("Key", typeof(Key))]
-      public Key[][] CareerSpecSkills {
+      [XmlArray(Form=XmlSchemaForm.Unqualified)]
+      [XmlArrayItem("Key", typeof(Key))]
+      public Key[] CareerSpecSkills {
          get {
-            return this.careerSpecSkillsField;
+            return careerSpecSkillsField;
          }
          set {
-            this.careerSpecSkillsField = value;
+            careerSpecSkillsField = value;
          }
       }
    }

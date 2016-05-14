@@ -1,12 +1,19 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   public partial class CharacterRiggerCustRigger {
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   public class CharacterRiggerCustRigger {
     
       private string chooseVehicleField;
     
@@ -21,68 +28,68 @@ namespace OggDudeData.Model.Character
       private string weaponModsField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string ChooseVehicle {
          get {
-            return this.chooseVehicleField;
+            return chooseVehicleField;
          }
          set {
-            this.chooseVehicleField = value;
+            chooseVehicleField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string SilhouetteBase {
          get {
-            return this.silhouetteBaseField;
+            return silhouetteBaseField;
          }
          set {
-            this.silhouetteBaseField = value;
+            silhouetteBaseField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string SilhouetteAdd {
          get {
-            return this.silhouetteAddField;
+            return silhouetteAddField;
          }
          set {
-            this.silhouetteAddField = value;
+            silhouetteAddField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string BaseMods {
          get {
-            return this.baseModsField;
+            return baseModsField;
          }
          set {
-            this.baseModsField = value;
+            baseModsField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string ChooseWeapon {
          get {
-            return this.chooseWeaponField;
+            return chooseWeaponField;
          }
          set {
-            this.chooseWeaponField = value;
+            chooseWeaponField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string WeaponMods {
          get {
-            return this.weaponModsField;
+            return weaponModsField;
          }
          set {
-            this.weaponModsField = value;
+            weaponModsField = value;
          }
       }
    }

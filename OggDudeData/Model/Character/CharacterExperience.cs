@@ -1,36 +1,43 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   public partial class CharacterExperience {
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   public class CharacterExperience {
     
       private string usedExperienceField;
     
       private CharacterExperienceExperienceRanks[] experienceRanksField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string UsedExperience {
          get {
-            return this.usedExperienceField;
+            return usedExperienceField;
          }
          set {
-            this.usedExperienceField = value;
+            usedExperienceField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("ExperienceRanks", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement("ExperienceRanks", Form=XmlSchemaForm.Unqualified)]
       public CharacterExperienceExperienceRanks[] ExperienceRanks {
          get {
-            return this.experienceRanksField;
+            return experienceRanksField;
          }
          set {
-            this.experienceRanksField = value;
+            experienceRanksField = value;
          }
       }
    }

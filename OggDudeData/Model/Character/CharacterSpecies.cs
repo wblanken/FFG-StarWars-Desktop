@@ -1,64 +1,71 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   public partial class CharacterSpecies {
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   public class CharacterSpecies {
     
       private string speciesKeyField;
     
       private string subSpeciesKeyField;
     
-      private CharacterSpeciesSelectedOptionsCharOption[][] selectedOptionsField;
+      private CharacterSpeciesSelectedOptionsCharOption[] selectedOptionsField;
     
-      private Key[][] nonCareerSkillsField;
+      private Key[] nonCareerSkillsField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string SpeciesKey {
          get {
-            return this.speciesKeyField;
+            return speciesKeyField;
          }
          set {
-            this.speciesKeyField = value;
+            speciesKeyField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string SubSpeciesKey {
          get {
-            return this.subSpeciesKeyField;
+            return subSpeciesKeyField;
          }
          set {
-            this.subSpeciesKeyField = value;
+            subSpeciesKeyField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      [System.Xml.Serialization.XmlArrayItemAttribute("CharOption", typeof(CharacterSpeciesSelectedOptionsCharOption), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-      public CharacterSpeciesSelectedOptionsCharOption[][] SelectedOptions {
+      [XmlArray(Form=XmlSchemaForm.Unqualified)]
+      [XmlArrayItem("CharOption", typeof(CharacterSpeciesSelectedOptionsCharOption), Form=XmlSchemaForm.Unqualified, IsNullable=false)]
+      public CharacterSpeciesSelectedOptionsCharOption[] SelectedOptions {
          get {
-            return this.selectedOptionsField;
+            return selectedOptionsField;
          }
          set {
-            this.selectedOptionsField = value;
+            selectedOptionsField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      [System.Xml.Serialization.XmlArrayItemAttribute("Key", typeof(Key))]
-      public Key[][] NonCareerSkills {
+      [XmlArray(Form=XmlSchemaForm.Unqualified)]
+      [XmlArrayItem("Key", typeof(Key))]
+      public Key[] NonCareerSkills {
          get {
-            return this.nonCareerSkillsField;
+            return nonCareerSkillsField;
          }
          set {
-            this.nonCareerSkillsField = value;
+            nonCareerSkillsField = value;
          }
       }
    }

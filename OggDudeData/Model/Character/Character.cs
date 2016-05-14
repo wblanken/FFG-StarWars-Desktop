@@ -1,487 +1,418 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   [System.Xml.Serialization.XmlRootAttribute(Namespace="", IsNullable=false)]
-   public partial class Character {
-    
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType = true)]
+   [XmlRoot(Namespace = "", IsNullable = false)]
+   public class Character
+   {
       private string lastChangedField;
-    
+
       private string notPersistedField;
-    
+
       private string fileNameField;
-    
+
       private string nameField;
-    
+
       private string keyField;
-    
+
       private string forcePowersField;
-    
+
       private string sigAbilitiesField;
-    
+
       private string dutiesField;
-    
+
       private string vehiclesField;
-    
+
       private string storyField;
-    
+
       private string creditsField;
-    
+
       private string useGrantsField;
-    
+
       private string portraitField;
-    
+
       private string autoRecalcField;
-    
+
       private CharacterDescription[] descriptionField;
-    
-      private CharacterCharacteristicsCharCharacteristic[][] characteristicsField;
-    
-      private CharacterMotivationsCharMotivation[][] motivationsField;
-    
-      private CharacterSpecializationsCharSpecialization[][] specializationsField;
-    
-      private CharacterSkillsCharSkill[][] skillsField;
-    
+
+      private CharacterCharacteristicsCharCharacteristic[] characteristicsField;
+
+      private CharacterMotivationsCharMotivation[] motivationsField;
+
+      private CharacterSpecializationsCharSpecialization[] specializationsField;
+
+      private CharacterSkillsCharSkill[] skillsField;
+
       private CharacterObOptions[] obOptionsField;
-    
-      private CharacterObligationsCharObligation[][] obligationsField;
-    
+
+      private CharacterObligationsCharObligation[] obligationsField;
+
       private CharacterDutOptions[] dutOptionsField;
-    
+
       private CharacterExperience[] experienceField;
-    
+
       private CharacterAttributes[] attributesField;
-    
+
       private CharacterSpecies[] speciesField;
-    
+
       private CharacterCareer[] careerField;
-    
+
       private CharacterClass[] classField;
-    
+
       private CharacterHook[] hookField;
-    
+
       private CharacterAttitude[] attitudeField;
-    
-      private CharacterWeaponsCharWeapon[][] weaponsField;
-    
-      private CharacterArmorCharArmor[][] armorField;
-    
-      private CharacterGearCharGear[][] gearField;
-    
+
+      private CharacterWeaponsCharWeapon[] weaponsField;
+
+      private CharacterArmorCharArmor[] armorField;
+
+      private CharacterGearCharGear[] gearField;
+
       private CharacterSummaryPriorities[] summaryPrioritiesField;
-    
+
       private CharacterMorality[] moralityField;
-    
+
       private CharacterGrants[] grantsField;
-    
+
       private CharacterRigger[] riggerField;
-    
+
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string LastChanged {
-         get {
-            return this.lastChangedField;
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string LastChanged
+      {
+         get { return lastChangedField; }
+         set { lastChangedField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string NotPersisted
+      {
+         get { return notPersistedField; }
+         set { notPersistedField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string FileName
+      {
+         get { return fileNameField; }
+         set { fileNameField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string Name
+      {
+         get { return nameField; }
+         set { nameField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string Key
+      {
+         get { return keyField; }
+         set { keyField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string ForcePowers
+      {
+         get { return forcePowersField; }
+         set { forcePowersField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string SigAbilities
+      {
+         get { return sigAbilitiesField; }
+         set { sigAbilitiesField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string Duties
+      {
+         get { return dutiesField; }
+         set { dutiesField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string Vehicles
+      {
+         get { return vehiclesField; }
+         set { vehiclesField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string Story
+      {
+         get { return storyField; }
+         set { storyField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string Credits
+      {
+         get { return creditsField; }
+         set { creditsField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string UseGrants
+      {
+         get { return useGrantsField; }
+         set { useGrantsField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string Portrait
+      {
+         get { return portraitField; }
+         set { portraitField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string AutoRecalc
+      {
+         get { return autoRecalcField; }
+         set { autoRecalcField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement("Description", Form = XmlSchemaForm.Unqualified)]
+      public CharacterDescription[] Description
+      {
+         get { return descriptionField; }
+         set { descriptionField = value; }
+      }
+
+      /// <remarks/>
+      [XmlArray(Form = XmlSchemaForm.Unqualified)]
+      [XmlArrayItem("CharCharacteristic", typeof(CharacterCharacteristicsCharCharacteristic),
+         Form = XmlSchemaForm.Unqualified, IsNullable = false)]
+      public CharacterCharacteristicsCharCharacteristic[] Characteristics
+      {
+         get { return CharacteristicsField; }
+         set { CharacteristicsField = value; }
+      }
+
+      /// <remarks/>
+      [XmlArray(Form = XmlSchemaForm.Unqualified)]
+      [XmlArrayItem("CharMotivation", typeof(CharacterMotivationsCharMotivation), Form = XmlSchemaForm.Unqualified,
+         IsNullable = false)]
+      public CharacterMotivationsCharMotivation[] Motivations
+      {
+         get { return motivationsField; }
+         set { motivationsField = value; }
+      }
+
+      /// <remarks/>
+      [XmlArray(Form = XmlSchemaForm.Unqualified)]
+      [XmlArrayItem("CharSpecialization", typeof(CharacterSpecializationsCharSpecialization),
+         Form = XmlSchemaForm.Unqualified, IsNullable = false)]
+      public CharacterSpecializationsCharSpecialization[] Specializations
+      {
+         get { return SpecializationsField; }
+         set { SpecializationsField = value; }
+      }
+
+      /// <remarks/>
+      [XmlArray(Form = XmlSchemaForm.Unqualified)]
+      [XmlArrayItem("CharSkill", typeof(CharacterSkillsCharSkill), Form = XmlSchemaForm.Unqualified, IsNullable = false)
+      ]
+      public CharacterSkillsCharSkill[] Skills
+      {
+         get { return skillsField; }
+         set { skillsField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement("ObOptions", Form = XmlSchemaForm.Unqualified)]
+      public CharacterObOptions[] ObOptions
+      {
+         get { return obOptionsField; }
+         set { obOptionsField = value; }
+      }
+
+      /// <remarks/>
+      [XmlArray(Form = XmlSchemaForm.Unqualified)]
+      [XmlArrayItem("CharObligation", typeof(CharacterObligationsCharObligation), Form = XmlSchemaForm.Unqualified,
+         IsNullable = false)]
+      public CharacterObligationsCharObligation[] Obligations
+      {
+         get { return obligationsField; }
+         set { obligationsField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement("DutOptions", Form = XmlSchemaForm.Unqualified)]
+      public CharacterDutOptions[] DutOptions
+      {
+         get { return dutOptionsField; }
+         set { dutOptionsField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement("Experience", Form = XmlSchemaForm.Unqualified)]
+      public CharacterExperience[] Experience
+      {
+         get { return experienceField; }
+         set { experienceField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement("Attributes", Form = XmlSchemaForm.Unqualified)]
+      public CharacterAttributes[] Attributes
+      {
+         get { return attributesField; }
+         set { attributesField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement("Species", Form = XmlSchemaForm.Unqualified)]
+      public CharacterSpecies[] Species
+      {
+         get { return speciesField; }
+         set { speciesField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement("Career", Form = XmlSchemaForm.Unqualified)]
+      public CharacterCareer[] Career
+      {
+         get { return careerField; }
+         set { careerField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement("Class", Form = XmlSchemaForm.Unqualified)]
+      public CharacterClass[] Class
+      {
+         get { return classField; }
+         set { classField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement("Hook", Form = XmlSchemaForm.Unqualified)]
+      public CharacterHook[] Hook
+      {
+         get { return hookField; }
+         set { hookField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement("Attitude", Form = XmlSchemaForm.Unqualified)]
+      public CharacterAttitude[] Attitude
+      {
+         get { return attitudeField; }
+         set { attitudeField = value; }
+      }
+
+      /// <remarks/>
+      [XmlArray(Form = XmlSchemaForm.Unqualified)]
+      [XmlArrayItem("CharWeapon", typeof(CharacterWeaponsCharWeapon), Form = XmlSchemaForm.Unqualified,
+         IsNullable = false)]
+      public CharacterWeaponsCharWeapon[] Weapons
+      {
+         get { return weaponsField; }
+         set { weaponsField = value; }
+      }
+
+      /// <remarks/>
+      [XmlArray(Form = XmlSchemaForm.Unqualified)]
+      [XmlArrayItem("CharArmor", typeof(CharacterArmorCharArmor), Form = XmlSchemaForm.Unqualified, IsNullable = false)]
+      public CharacterArmorCharArmor[] Armor
+      {
+         get { return armorField; }
+         set { armorField = value; }
+      }
+
+      /// <remarks/>
+      [XmlArray(Form = XmlSchemaForm.Unqualified)]
+      [XmlArrayItem("CharGear", typeof(CharacterGearCharGear), Form = XmlSchemaForm.Unqualified, IsNullable = false)]
+      public CharacterGearCharGear[] Gear
+      {
+         get { return gearField; }
+         set { gearField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement("SummaryPriorities", Form = XmlSchemaForm.Unqualified)]
+      public CharacterSummaryPriorities[] SummaryPriorities
+      {
+         get { return summaryPrioritiesField; }
+         set { summaryPrioritiesField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement("Morality", Form = XmlSchemaForm.Unqualified)]
+      public CharacterMorality[] Morality
+      {
+         get { return moralityField; }
+         set { moralityField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement("Grants", Form = XmlSchemaForm.Unqualified)]
+      public CharacterGrants[] Grants
+      {
+         get { return grantsField; }
+         set { grantsField = value; }
+      }
+
+      /// <remarks/>
+      [XmlElement("Rigger", Form = XmlSchemaForm.Unqualified)]
+      public CharacterRigger[] Rigger
+      {
+         get { return riggerField; }
+         set { riggerField = value; }
+      }
+
+      public CharacterSpecializationsCharSpecialization[] SpecializationsField
+      {
+         get
+         {
+            return specializationsField;
          }
-         set {
-            this.lastChangedField = value;
+
+         set
+         {
+            specializationsField = value;
          }
       }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string NotPersisted {
-         get {
-            return this.notPersistedField;
-         }
-         set {
-            this.notPersistedField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string FileName {
-         get {
-            return this.fileNameField;
-         }
-         set {
-            this.fileNameField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string Name {
-         get {
-            return this.nameField;
-         }
-         set {
-            this.nameField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string Key {
-         get {
-            return this.keyField;
-         }
-         set {
-            this.keyField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string ForcePowers {
-         get {
-            return this.forcePowersField;
-         }
-         set {
-            this.forcePowersField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string SigAbilities {
-         get {
-            return this.sigAbilitiesField;
-         }
-         set {
-            this.sigAbilitiesField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string Duties {
-         get {
-            return this.dutiesField;
-         }
-         set {
-            this.dutiesField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string Vehicles {
-         get {
-            return this.vehiclesField;
-         }
-         set {
-            this.vehiclesField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string Story {
-         get {
-            return this.storyField;
-         }
-         set {
-            this.storyField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string Credits {
-         get {
-            return this.creditsField;
-         }
-         set {
-            this.creditsField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string UseGrants {
-         get {
-            return this.useGrantsField;
-         }
-         set {
-            this.useGrantsField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string Portrait {
-         get {
-            return this.portraitField;
-         }
-         set {
-            this.portraitField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string AutoRecalc {
-         get {
-            return this.autoRecalcField;
-         }
-         set {
-            this.autoRecalcField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("Description", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public CharacterDescription[] Description {
-         get {
-            return this.descriptionField;
-         }
-         set {
-            this.descriptionField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      [System.Xml.Serialization.XmlArrayItemAttribute("CharCharacteristic", typeof(CharacterCharacteristicsCharCharacteristic), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-      public CharacterCharacteristicsCharCharacteristic[][] Characteristics {
-         get {
-            return this.characteristicsField;
-         }
-         set {
-            this.characteristicsField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      [System.Xml.Serialization.XmlArrayItemAttribute("CharMotivation", typeof(CharacterMotivationsCharMotivation), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-      public CharacterMotivationsCharMotivation[][] Motivations {
-         get {
-            return this.motivationsField;
-         }
-         set {
-            this.motivationsField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      [System.Xml.Serialization.XmlArrayItemAttribute("CharSpecialization", typeof(CharacterSpecializationsCharSpecialization), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-      public CharacterSpecializationsCharSpecialization[][] Specializations {
-         get {
-            return this.specializationsField;
-         }
-         set {
-            this.specializationsField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      [System.Xml.Serialization.XmlArrayItemAttribute("CharSkill", typeof(CharacterSkillsCharSkill), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-      public CharacterSkillsCharSkill[][] Skills {
-         get {
-            return this.skillsField;
-         }
-         set {
-            this.skillsField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("ObOptions", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public CharacterObOptions[] ObOptions {
-         get {
-            return this.obOptionsField;
-         }
-         set {
-            this.obOptionsField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      [System.Xml.Serialization.XmlArrayItemAttribute("CharObligation", typeof(CharacterObligationsCharObligation), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-      public CharacterObligationsCharObligation[][] Obligations {
-         get {
-            return this.obligationsField;
-         }
-         set {
-            this.obligationsField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("DutOptions", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public CharacterDutOptions[] DutOptions {
-         get {
-            return this.dutOptionsField;
-         }
-         set {
-            this.dutOptionsField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("Experience", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public CharacterExperience[] Experience {
-         get {
-            return this.experienceField;
-         }
-         set {
-            this.experienceField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("Attributes", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public CharacterAttributes[] Attributes {
-         get {
-            return this.attributesField;
-         }
-         set {
-            this.attributesField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("Species", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public CharacterSpecies[] Species {
-         get {
-            return this.speciesField;
-         }
-         set {
-            this.speciesField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("Career", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public CharacterCareer[] Career {
-         get {
-            return this.careerField;
-         }
-         set {
-            this.careerField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("Class", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public CharacterClass[] Class {
-         get {
-            return this.classField;
-         }
-         set {
-            this.classField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("Hook", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public CharacterHook[] Hook {
-         get {
-            return this.hookField;
-         }
-         set {
-            this.hookField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("Attitude", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public CharacterAttitude[] Attitude {
-         get {
-            return this.attitudeField;
-         }
-         set {
-            this.attitudeField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      [System.Xml.Serialization.XmlArrayItemAttribute("CharWeapon", typeof(CharacterWeaponsCharWeapon), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-      public CharacterWeaponsCharWeapon[][] Weapons {
-         get {
-            return this.weaponsField;
-         }
-         set {
-            this.weaponsField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      [System.Xml.Serialization.XmlArrayItemAttribute("CharArmor", typeof(CharacterArmorCharArmor), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-      public CharacterArmorCharArmor[][] Armor {
-         get {
-            return this.armorField;
-         }
-         set {
-            this.armorField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      [System.Xml.Serialization.XmlArrayItemAttribute("CharGear", typeof(CharacterGearCharGear), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-      public CharacterGearCharGear[][] Gear {
-         get {
-            return this.gearField;
-         }
-         set {
-            this.gearField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("SummaryPriorities", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public CharacterSummaryPriorities[] SummaryPriorities {
-         get {
-            return this.summaryPrioritiesField;
-         }
-         set {
-            this.summaryPrioritiesField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("Morality", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public CharacterMorality[] Morality {
-         get {
-            return this.moralityField;
-         }
-         set {
-            this.moralityField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("Grants", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public CharacterGrants[] Grants {
-         get {
-            return this.grantsField;
-         }
-         set {
-            this.grantsField = value;
-         }
-      }
-    
-      /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("Rigger", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public CharacterRigger[] Rigger {
-         get {
-            return this.riggerField;
-         }
-         set {
-            this.riggerField = value;
+
+      public CharacterCharacteristicsCharCharacteristic[] CharacteristicsField
+      {
+         get
+         {
+            return characteristicsField;
+         }
+
+         set
+         {
+            characteristicsField = value;
          }
       }
    }

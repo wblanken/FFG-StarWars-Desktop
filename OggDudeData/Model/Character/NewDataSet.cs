@@ -1,27 +1,33 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   [System.Xml.Serialization.XmlRootAttribute(Namespace="", IsNullable=false)]
-   public partial class NewDataSet {
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   [XmlRoot(Namespace="", IsNullable=false)]
+   public class NewDataSet {
     
       private object[] itemsField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("Character", typeof(Character))]
-      [System.Xml.Serialization.XmlElementAttribute("Key", typeof(Key), IsNullable=true)]
-      [System.Xml.Serialization.XmlElementAttribute("Rank", typeof(Rank))]
-      [System.Xml.Serialization.XmlElementAttribute("Requirement", typeof(Requirement))]
+      [XmlElement("Character", typeof(Character))]
+      [XmlElement("Key", typeof(Key), IsNullable=true)]
+      [XmlElement("Rank", typeof(Rank))]
+      [XmlElement("Requirement", typeof(Requirement))]
       public object[] Items {
          get {
-            return this.itemsField;
+            return itemsField;
          }
          set {
-            this.itemsField = value;
+            itemsField = value;
          }
       }
    }

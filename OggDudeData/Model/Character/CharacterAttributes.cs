@@ -1,12 +1,19 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   public partial class CharacterAttributes {
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   public class CharacterAttributes {
     
       private CharacterAttributesSoakValue[] soakValueField;
     
@@ -21,68 +28,68 @@ namespace OggDudeData.Model.Character
       private CharacterAttributesForceRating[] forceRatingField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("SoakValue", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement("SoakValue", Form=XmlSchemaForm.Unqualified)]
       public CharacterAttributesSoakValue[] SoakValue {
          get {
-            return this.soakValueField;
+            return soakValueField;
          }
          set {
-            this.soakValueField = value;
+            soakValueField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("WoundThreshold", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement("WoundThreshold", Form=XmlSchemaForm.Unqualified)]
       public CharacterAttributesWoundThreshold[] WoundThreshold {
          get {
-            return this.woundThresholdField;
+            return woundThresholdField;
          }
          set {
-            this.woundThresholdField = value;
+            woundThresholdField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("StrainThreshold", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement("StrainThreshold", Form=XmlSchemaForm.Unqualified)]
       public CharacterAttributesStrainThreshold[] StrainThreshold {
          get {
-            return this.strainThresholdField;
+            return strainThresholdField;
          }
          set {
-            this.strainThresholdField = value;
+            strainThresholdField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("DefenseRanged", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement("DefenseRanged", Form=XmlSchemaForm.Unqualified)]
       public CharacterAttributesDefenseRanged[] DefenseRanged {
          get {
-            return this.defenseRangedField;
+            return defenseRangedField;
          }
          set {
-            this.defenseRangedField = value;
+            defenseRangedField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("DefenseMelee", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement("DefenseMelee", Form=XmlSchemaForm.Unqualified)]
       public CharacterAttributesDefenseMelee[] DefenseMelee {
          get {
-            return this.defenseMeleeField;
+            return defenseMeleeField;
          }
          set {
-            this.defenseMeleeField = value;
+            defenseMeleeField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("ForceRating", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement("ForceRating", Form=XmlSchemaForm.Unqualified)]
       public CharacterAttributesForceRating[] ForceRating {
          get {
-            return this.forceRatingField;
+            return forceRatingField;
          }
          set {
-            this.forceRatingField = value;
+            forceRatingField = value;
          }
       }
    }

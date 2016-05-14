@@ -1,12 +1,19 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   public partial class CharacterSpeciesSelectedOptionsCharOption {
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   public class CharacterSpeciesSelectedOptionsCharOption {
     
       private string choiceKeyField;
     
@@ -22,94 +29,94 @@ namespace OggDudeData.Model.Character
     
       private CharacterSpeciesSelectedOptionsCharOptionStartingAttribs[] startingAttribsField;
     
-      private CharacterSpeciesSelectedOptionsCharOptionStartingSkillTrainingSkillTraining[][] startingSkillTrainingField;
+      private CharacterSpeciesSelectedOptionsCharOptionStartingSkillTrainingSkillTraining[] startingSkillTrainingField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string ChoiceKey {
          get {
-            return this.choiceKeyField;
+            return choiceKeyField;
          }
          set {
-            this.choiceKeyField = value;
+            choiceKeyField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string OptionKey {
          get {
-            return this.optionKeyField;
+            return optionKeyField;
          }
          set {
-            this.optionKeyField = value;
+            optionKeyField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string SkillModifiers {
          get {
-            return this.skillModifiersField;
+            return skillModifiersField;
          }
          set {
-            this.skillModifiersField = value;
+            skillModifiersField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string TalentModifiers {
          get {
-            return this.talentModifiersField;
+            return talentModifiersField;
          }
          set {
-            this.talentModifiersField = value;
+            talentModifiersField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string DieModifiers {
          get {
-            return this.dieModifiersField;
+            return dieModifiersField;
          }
          set {
-            this.dieModifiersField = value;
+            dieModifiersField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("StartingChars", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement("StartingChars", Form=XmlSchemaForm.Unqualified)]
       public CharacterSpeciesSelectedOptionsCharOptionStartingChars[] StartingChars {
          get {
-            return this.startingCharsField;
+            return startingCharsField;
          }
          set {
-            this.startingCharsField = value;
+            startingCharsField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("StartingAttribs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement("StartingAttribs", Form=XmlSchemaForm.Unqualified)]
       public CharacterSpeciesSelectedOptionsCharOptionStartingAttribs[] StartingAttribs {
          get {
-            return this.startingAttribsField;
+            return startingAttribsField;
          }
          set {
-            this.startingAttribsField = value;
+            startingAttribsField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      [System.Xml.Serialization.XmlArrayItemAttribute("SkillTraining", typeof(CharacterSpeciesSelectedOptionsCharOptionStartingSkillTrainingSkillTraining), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-      public CharacterSpeciesSelectedOptionsCharOptionStartingSkillTrainingSkillTraining[][] StartingSkillTraining {
+      [XmlArray(Form=XmlSchemaForm.Unqualified)]
+      [XmlArrayItem("SkillTraining", typeof(CharacterSpeciesSelectedOptionsCharOptionStartingSkillTrainingSkillTraining), Form=XmlSchemaForm.Unqualified, IsNullable=false)]
+      public CharacterSpeciesSelectedOptionsCharOptionStartingSkillTrainingSkillTraining[] StartingSkillTraining {
          get {
-            return this.startingSkillTrainingField;
+            return startingSkillTrainingField;
          }
          set {
-            this.startingSkillTrainingField = value;
+            startingSkillTrainingField = value;
          }
       }
    }

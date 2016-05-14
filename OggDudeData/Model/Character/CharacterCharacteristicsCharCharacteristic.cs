@@ -1,102 +1,89 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   public partial class CharacterCharacteristicsCharCharacteristic {
-    
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType = true)]
+   public class CharacterCharacteristicsCharCharacteristic
+   {
+
       private string keyField;
-    
+
       private string nameField;
-    
+
       private string descriptionField;
-    
+
       private string sourceField;
-    
+
       private string sourcesField;
-    
+
       private string customField;
-    
+
       private Rank[] rankField;
-    
+
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string Key {
-         get {
-            return this.keyField;
-         }
-         set {
-            this.keyField = value;
-         }
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string Key
+      {
+         get { return keyField; }
+         set { keyField = value; }
       }
-    
+
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string Name {
-         get {
-            return this.nameField;
-         }
-         set {
-            this.nameField = value;
-         }
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string Name
+      {
+         get { return nameField; }
+         set { nameField = value; }
       }
-    
+
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string Description {
-         get {
-            return this.descriptionField;
-         }
-         set {
-            this.descriptionField = value;
-         }
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string Description
+      {
+         get { return descriptionField; }
+         set { descriptionField = value; }
       }
-    
+
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string Source {
-         get {
-            return this.sourceField;
-         }
-         set {
-            this.sourceField = value;
-         }
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string Source
+      {
+         get { return sourceField; }
+         set { sourceField = value; }
       }
-    
+
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string Sources {
-         get {
-            return this.sourcesField;
-         }
-         set {
-            this.sourcesField = value;
-         }
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string Sources
+      {
+         get { return sourcesField; }
+         set { sourcesField = value; }
       }
-    
+
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      public string Custom {
-         get {
-            return this.customField;
-         }
-         set {
-            this.customField = value;
-         }
+      [XmlElement(Form = XmlSchemaForm.Unqualified)]
+      public string Custom
+      {
+         get { return customField; }
+         set { customField = value; }
       }
-    
+
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("Rank")]
-      public Rank[] Rank {
-         get {
-            return this.rankField;
-         }
-         set {
-            this.rankField = value;
-         }
+      [XmlElement("Rank")]
+      public Rank[] Rank
+      {
+         get { return rankField; }
+         set { rankField = value; }
       }
    }
 }

@@ -1,25 +1,28 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   [System.Xml.Serialization.XmlRootAttribute(Namespace="", IsNullable=true)]
-   public partial class Key {
-    
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType = true)]
+   [XmlRoot(Namespace = "", IsNullable = true)]
+   public class Key
+   {
       private string valueField;
-    
+
       /// <remarks/>
-      [System.Xml.Serialization.XmlTextAttribute()]
-      public string Value {
-         get {
-            return this.valueField;
-         }
-         set {
-            this.valueField = value;
-         }
+      [XmlText]
+      public string Value
+      {
+         get { return valueField; }
+         set { valueField = value; }
       }
    }
 }

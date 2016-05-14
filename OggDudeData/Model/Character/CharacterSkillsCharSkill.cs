@@ -1,12 +1,19 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   public partial class CharacterSkillsCharSkill {
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   public class CharacterSkillsCharSkill {
     
       private string keyField;
     
@@ -27,101 +34,101 @@ namespace OggDudeData.Model.Character
       private Rank[] rankField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Key {
          get {
-            return this.keyField;
+            return keyField;
          }
          set {
-            this.keyField = value;
+            keyField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Name {
          get {
-            return this.nameField;
+            return nameField;
          }
          set {
-            this.nameField = value;
+            nameField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Description {
          get {
-            return this.descriptionField;
+            return descriptionField;
          }
          set {
-            this.descriptionField = value;
+            descriptionField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Source {
          get {
-            return this.sourceField;
+            return sourceField;
          }
          set {
-            this.sourceField = value;
+            sourceField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Sources {
          get {
-            return this.sourcesField;
+            return sourcesField;
          }
          set {
-            this.sourcesField = value;
+            sourcesField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Custom {
          get {
-            return this.customField;
+            return customField;
          }
          set {
-            this.customField = value;
+            customField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string isCareer {
          get {
-            return this.isCareerField;
+            return isCareerField;
          }
          set {
-            this.isCareerField = value;
+            isCareerField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string CharKeyOverride {
          get {
-            return this.charKeyOverrideField;
+            return charKeyOverrideField;
          }
          set {
-            this.charKeyOverrideField = value;
+            charKeyOverrideField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("Rank")]
+      [XmlElement("Rank")]
       public Rank[] Rank {
          get {
-            return this.rankField;
+            return rankField;
          }
          set {
-            this.rankField = value;
+            rankField = value;
          }
       }
    }

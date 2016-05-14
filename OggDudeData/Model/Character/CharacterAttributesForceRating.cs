@@ -1,12 +1,19 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   public partial class CharacterAttributesForceRating {
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   public class CharacterAttributesForceRating {
     
       private string forSkillsField;
     
@@ -45,200 +52,200 @@ namespace OggDudeData.Model.Character
       private string defWeaponAttachRanksField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string ForSkills {
          get {
-            return this.forSkillsField;
+            return forSkillsField;
          }
          set {
-            this.forSkillsField = value;
+            forSkillsField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string ForChars {
          get {
-            return this.forCharsField;
+            return forCharsField;
          }
          set {
-            this.forCharsField = value;
+            forCharsField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string StartingRanks {
          get {
-            return this.startingRanksField;
+            return startingRanksField;
          }
          set {
-            this.startingRanksField = value;
+            startingRanksField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string SpeciesRanks {
          get {
-            return this.speciesRanksField;
+            return speciesRanksField;
          }
          set {
-            this.speciesRanksField = value;
+            speciesRanksField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string CareerRanks {
          get {
-            return this.careerRanksField;
+            return careerRanksField;
          }
          set {
-            this.careerRanksField = value;
+            careerRanksField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string TalentRanks {
          get {
-            return this.talentRanksField;
+            return talentRanksField;
          }
          set {
-            this.talentRanksField = value;
+            talentRanksField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string ObligationRanks {
          get {
-            return this.obligationRanksField;
+            return obligationRanksField;
          }
          set {
-            this.obligationRanksField = value;
+            obligationRanksField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string DutyRanks {
          get {
-            return this.dutyRanksField;
+            return dutyRanksField;
          }
          set {
-            this.dutyRanksField = value;
+            dutyRanksField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string AttachRanks {
          get {
-            return this.attachRanksField;
+            return attachRanksField;
          }
          set {
-            this.attachRanksField = value;
+            attachRanksField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string ItemRanks {
          get {
-            return this.itemRanksField;
+            return itemRanksField;
          }
          set {
-            this.itemRanksField = value;
+            itemRanksField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string CyberRanks {
          get {
-            return this.cyberRanksField;
+            return cyberRanksField;
          }
          set {
-            this.cyberRanksField = value;
+            cyberRanksField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string PurchasedRanks {
          get {
-            return this.purchasedRanksField;
+            return purchasedRanksField;
          }
          set {
-            this.purchasedRanksField = value;
+            purchasedRanksField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string CharRanks {
          get {
-            return this.charRanksField;
+            return charRanksField;
          }
          set {
-            this.charRanksField = value;
+            charRanksField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string InjuryRanks {
          get {
-            return this.injuryRanksField;
+            return injuryRanksField;
          }
          set {
-            this.injuryRanksField = value;
+            injuryRanksField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string NonCareerRanks {
          get {
-            return this.nonCareerRanksField;
+            return nonCareerRanksField;
          }
          set {
-            this.nonCareerRanksField = value;
+            nonCareerRanksField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string GrantRanks {
          get {
-            return this.grantRanksField;
+            return grantRanksField;
          }
          set {
-            this.grantRanksField = value;
+            grantRanksField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string DefWeaponRanks {
          get {
-            return this.defWeaponRanksField;
+            return defWeaponRanksField;
          }
          set {
-            this.defWeaponRanksField = value;
+            defWeaponRanksField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string DefWeaponAttachRanks {
          get {
-            return this.defWeaponAttachRanksField;
+            return defWeaponAttachRanksField;
          }
          set {
-            this.defWeaponAttachRanksField = value;
+            defWeaponAttachRanksField = value;
          }
       }
    }

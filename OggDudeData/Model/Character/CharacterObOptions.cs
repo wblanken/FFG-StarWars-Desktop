@@ -1,12 +1,19 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   public partial class CharacterObOptions {
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   public class CharacterObOptions {
     
       private string startingSizeField;
     
@@ -19,57 +26,57 @@ namespace OggDudeData.Model.Character
       private string plus2500CrField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string StartingSize {
          get {
-            return this.startingSizeField;
+            return startingSizeField;
          }
          set {
-            this.startingSizeField = value;
+            startingSizeField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Plus5XP {
          get {
-            return this.plus5XPField;
+            return plus5XPField;
          }
          set {
-            this.plus5XPField = value;
+            plus5XPField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Plus10XP {
          get {
-            return this.plus10XPField;
+            return plus10XPField;
          }
          set {
-            this.plus10XPField = value;
+            plus10XPField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Plus1000Cr {
          get {
-            return this.plus1000CrField;
+            return plus1000CrField;
          }
          set {
-            this.plus1000CrField = value;
+            plus1000CrField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Plus2500Cr {
          get {
-            return this.plus2500CrField;
+            return plus2500CrField;
          }
          set {
-            this.plus2500CrField = value;
+            plus2500CrField = value;
          }
       }
    }

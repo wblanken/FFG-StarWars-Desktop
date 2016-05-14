@@ -1,12 +1,19 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   public partial class CharacterSpecializationsCharSpecialization {
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   public class CharacterSpecializationsCharSpecialization {
     
       private string keyField;
     
@@ -24,105 +31,105 @@ namespace OggDudeData.Model.Character
     
       private string isCareerSpecField;
     
-      private CharacterSpecializationsCharSpecializationTalentsCharTalent[][] talentsField;
+      private CharacterSpecializationsCharSpecializationTalentsCharTalent[] talentsField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Key {
          get {
-            return this.keyField;
+            return keyField;
          }
          set {
-            this.keyField = value;
+            keyField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Name {
          get {
-            return this.nameField;
+            return nameField;
          }
          set {
-            this.nameField = value;
+            nameField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Description {
          get {
-            return this.descriptionField;
+            return descriptionField;
          }
          set {
-            this.descriptionField = value;
+            descriptionField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Source {
          get {
-            return this.sourceField;
+            return sourceField;
          }
          set {
-            this.sourceField = value;
+            sourceField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Sources {
          get {
-            return this.sourcesField;
+            return sourcesField;
          }
          set {
-            this.sourcesField = value;
+            sourcesField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Custom {
          get {
-            return this.customField;
+            return customField;
          }
          set {
-            this.customField = value;
+            customField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string isStartingSpec {
          get {
-            return this.isStartingSpecField;
+            return isStartingSpecField;
          }
          set {
-            this.isStartingSpecField = value;
+            isStartingSpecField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string isCareerSpec {
          get {
-            return this.isCareerSpecField;
+            return isCareerSpecField;
          }
          set {
-            this.isCareerSpecField = value;
+            isCareerSpecField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-      [System.Xml.Serialization.XmlArrayItemAttribute("CharTalent", typeof(CharacterSpecializationsCharSpecializationTalentsCharTalent), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-      public CharacterSpecializationsCharSpecializationTalentsCharTalent[][] Talents {
+      [XmlArray(Form=XmlSchemaForm.Unqualified)]
+      [XmlArrayItem("CharTalent", typeof(CharacterSpecializationsCharSpecializationTalentsCharTalent), Form=XmlSchemaForm.Unqualified, IsNullable=false)]
+      public CharacterSpecializationsCharSpecializationTalentsCharTalent[] Talents {
          get {
-            return this.talentsField;
+            return talentsField;
          }
          set {
-            this.talentsField = value;
+            talentsField = value;
          }
       }
    }

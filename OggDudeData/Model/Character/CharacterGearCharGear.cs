@@ -1,12 +1,19 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   public partial class CharacterGearCharGear {
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   public class CharacterGearCharGear {
     
       private string itemKeyField;
     
@@ -31,123 +38,123 @@ namespace OggDudeData.Model.Character
       private string hPPerItemField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string ItemKey {
          get {
-            return this.itemKeyField;
+            return itemKeyField;
          }
          set {
-            this.itemKeyField = value;
+            itemKeyField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Key {
          get {
-            return this.keyField;
+            return keyField;
          }
          set {
-            this.keyField = value;
+            keyField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Equipped {
          get {
-            return this.equippedField;
+            return equippedField;
          }
          set {
-            this.equippedField = value;
+            equippedField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Held {
          get {
-            return this.heldField;
+            return heldField;
          }
          set {
-            this.heldField = value;
+            heldField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Count {
          get {
-            return this.countField;
+            return countField;
          }
          set {
-            this.countField = value;
+            countField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string PurchasedAttachments {
          get {
-            return this.purchasedAttachmentsField;
+            return purchasedAttachmentsField;
          }
          set {
-            this.purchasedAttachmentsField = value;
+            purchasedAttachmentsField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string AddlHP {
          get {
-            return this.addlHPField;
+            return addlHPField;
          }
          set {
-            this.addlHPField = value;
+            addlHPField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Notes {
          get {
-            return this.notesField;
+            return notesField;
          }
          set {
-            this.notesField = value;
+            notesField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Rename {
          get {
-            return this.renameField;
+            return renameField;
          }
          set {
-            this.renameField = value;
+            renameField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Prioritize {
          get {
-            return this.prioritizeField;
+            return prioritizeField;
          }
          set {
-            this.prioritizeField = value;
+            prioritizeField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string HPPerItem {
          get {
-            return this.hPPerItemField;
+            return hPPerItemField;
          }
          set {
-            this.hPPerItemField = value;
+            hPPerItemField = value;
          }
       }
    }

@@ -1,12 +1,19 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   public partial class CharacterRigger {
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   public class CharacterRigger {
     
       private string vehicleKeyField;
     
@@ -17,46 +24,46 @@ namespace OggDudeData.Model.Character
       private CharacterRiggerCustRigger[] custRiggerField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string VehicleKey {
          get {
-            return this.vehicleKeyField;
+            return vehicleKeyField;
          }
          set {
-            this.vehicleKeyField = value;
+            vehicleKeyField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string WeaponIndex {
          get {
-            return this.weaponIndexField;
+            return weaponIndexField;
          }
          set {
-            this.weaponIndexField = value;
+            weaponIndexField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string MaxSilhouette {
          get {
-            return this.maxSilhouetteField;
+            return maxSilhouetteField;
          }
          set {
-            this.maxSilhouetteField = value;
+            maxSilhouetteField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("custRigger", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement("custRigger", Form=XmlSchemaForm.Unqualified)]
       public CharacterRiggerCustRigger[] custRigger {
          get {
-            return this.custRiggerField;
+            return custRiggerField;
          }
          set {
-            this.custRiggerField = value;
+            custRiggerField = value;
          }
       }
    }

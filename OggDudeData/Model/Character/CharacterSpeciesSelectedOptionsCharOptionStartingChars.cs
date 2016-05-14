@@ -1,12 +1,19 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   public partial class CharacterSpeciesSelectedOptionsCharOptionStartingChars {
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   public class CharacterSpeciesSelectedOptionsCharOptionStartingChars {
     
       private string brawnField;
     
@@ -23,79 +30,79 @@ namespace OggDudeData.Model.Character
       private Requirement[] requirementField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Brawn {
          get {
-            return this.brawnField;
+            return brawnField;
          }
          set {
-            this.brawnField = value;
+            brawnField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Agility {
          get {
-            return this.agilityField;
+            return agilityField;
          }
          set {
-            this.agilityField = value;
+            agilityField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Intellect {
          get {
-            return this.intellectField;
+            return intellectField;
          }
          set {
-            this.intellectField = value;
+            intellectField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Cunning {
          get {
-            return this.cunningField;
+            return cunningField;
          }
          set {
-            this.cunningField = value;
+            cunningField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Willpower {
          get {
-            return this.willpowerField;
+            return willpowerField;
          }
          set {
-            this.willpowerField = value;
+            willpowerField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string Presence {
          get {
-            return this.presenceField;
+            return presenceField;
          }
          set {
-            this.presenceField = value;
+            presenceField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute("Requirement")]
+      [XmlElement("Requirement")]
       public Requirement[] Requirement {
          get {
-            return this.requirementField;
+            return requirementField;
          }
          set {
-            this.requirementField = value;
+            requirementField = value;
          }
       }
    }

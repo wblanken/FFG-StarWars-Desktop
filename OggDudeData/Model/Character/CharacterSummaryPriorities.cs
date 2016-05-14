@@ -1,12 +1,19 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace OggDudeData.Model.Character
 {
    /// <remarks/>
-   [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-   [System.SerializableAttribute()]
-   [System.Diagnostics.DebuggerStepThroughAttribute()]
-   [System.ComponentModel.DesignerCategoryAttribute("code")]
-   [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-   public partial class CharacterSummaryPriorities {
+   [GeneratedCode("xsd", "4.6.1055.0")]
+   [Serializable]
+   [DebuggerStepThrough]
+   [DesignerCategory("code")]
+   [XmlType(AnonymousType=true)]
+   public class CharacterSummaryPriorities {
     
       private string talentPrioritiesField;
     
@@ -17,46 +24,46 @@ namespace OggDudeData.Model.Character
       private string dutyPrioritiesField;
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string TalentPriorities {
          get {
-            return this.talentPrioritiesField;
+            return talentPrioritiesField;
          }
          set {
-            this.talentPrioritiesField = value;
+            talentPrioritiesField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string ForcePriorities {
          get {
-            return this.forcePrioritiesField;
+            return forcePrioritiesField;
          }
          set {
-            this.forcePrioritiesField = value;
+            forcePrioritiesField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string ObligPriorities {
          get {
-            return this.obligPrioritiesField;
+            return obligPrioritiesField;
          }
          set {
-            this.obligPrioritiesField = value;
+            obligPrioritiesField = value;
          }
       }
     
       /// <remarks/>
-      [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+      [XmlElement(Form=XmlSchemaForm.Unqualified)]
       public string DutyPriorities {
          get {
-            return this.dutyPrioritiesField;
+            return dutyPrioritiesField;
          }
          set {
-            this.dutyPrioritiesField = value;
+            dutyPrioritiesField = value;
          }
       }
    }
