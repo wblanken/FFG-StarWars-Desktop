@@ -40,54 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Character\Character.cs" />
-    <Compile Include="Model\Character\CharacterArmorCharArmor.cs" />
-    <Compile Include="Model\Character\CharacterAttitude.cs" />
-    <Compile Include="Model\Character\CharacterAttributes.cs" />
-    <Compile Include="Model\Character\CharacterAttributesDefenseMelee.cs" />
-    <Compile Include="Model\Character\CharacterAttributesDefenseRanged.cs" />
-    <Compile Include="Model\Character\CharacterAttributesForceRating.cs" />
-    <Compile Include="Model\Character\CharacterAttributesSoakValue.cs" />
-    <Compile Include="Model\Character\CharacterAttributesStrainThreshold.cs" />
-    <Compile Include="Model\Character\CharacterAttributesWoundThreshold.cs" />
-    <Compile Include="Model\Character\CharacterCareer.cs" />
-    <Compile Include="Model\Character\CharacterCharacteristicsCharCharacteristic.cs" />
-    <Compile Include="Model\Character\CharacterClass.cs" />
-    <Compile Include="Model\Character\CharacterDescription.cs" />
-    <Compile Include="Model\Character\CharacterDutOptions.cs" />
-    <Compile Include="Model\Character\CharacterExperience.cs" />
-    <Compile Include="Model\Character\CharacterExperienceExperienceRanks.cs" />
-    <Compile Include="Model\Character\CharacterGearCharGear.cs" />
-    <Compile Include="Model\Character\CharacterGrants.cs" />
-    <Compile Include="Model\Character\CharacterHook.cs" />
-    <Compile Include="Model\Character\CharacterMorality.cs" />
-    <Compile Include="Model\Character\CharacterMoralityOptions.cs" />
-    <Compile Include="Model\Character\CharacterMotivationsCharMotivation.cs" />
-    <Compile Include="Model\Character\CharacterObligationsCharObligation.cs" />
-    <Compile Include="Model\Character\CharacterObOptions.cs" />
-    <Compile Include="Model\Character\CharacterRigger.cs" />
-    <Compile Include="Model\Character\CharacterRiggerCustRigger.cs" />
-    <Compile Include="Model\Character\CharacterSkillsCharSkill.cs" />
-    <Compile Include="Model\Character\CharacterSpecializationsCharSpecialization.cs" />
-    <Compile Include="Model\Character\CharacterSpecializationsCharSpecializationTalentsCharTalent.cs" />
-    <Compile Include="Model\Character\CharacterSpecies.cs" />
-    <Compile Include="Model\Character\CharacterSpeciesSelectedOptionsCharOption.cs" />
-    <Compile Include="Model\Character\CharacterSpeciesSelectedOptionsCharOptionStartingAttribs.cs" />
-    <Compile Include="Model\Character\CharacterSpeciesSelectedOptionsCharOptionStartingChars.cs" />
-    <Compile Include="Model\Character\CharacterSpeciesSelectedOptionsCharOptionStartingSkillTrainingSkillTraining.cs" />
-    <Compile Include="Model\Character\CharacterSummaryPriorities.cs" />
-    <Compile Include="Model\Character\CharacterWeaponsCharWeapon.cs" />
-    <Compile Include="Model\Character\Key.cs" />
-    <Compile Include="Model\Character\NewDataSet.cs" />
-    <Compile Include="Model\Character\Rank.cs" />
-    <Compile Include="Model\Character\Requirement.cs" />
+    <Compile Include="ImportData.cs" />
+    <Compile Include="Model\Character.cs">
+      <DependentUpon>Character.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SessionManager.Dto\SessionManager.Dto.csproj">
-      <Project>{3a2ade17-e6e9-4442-9435-f195d3992ad5}</Project>
-      <Name>SessionManager.Dto</Name>
-    </ProjectReference>
+    <None Include="Model\Character.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\Testy.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
