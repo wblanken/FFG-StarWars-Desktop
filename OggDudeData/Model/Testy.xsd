@@ -1,0 +1,863 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xsd:element name="Character">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="LastChanged" type="xsd:dateTime" />
+        <xsd:element name="NotPersisted" type="xsd:boolean" />
+        <xsd:element name="FileName" type="xsd:string" />
+        <xsd:element name="Name" type="xsd:string"/>
+        <xsd:element name="Key" type="xsd:string" />
+        <xsd:element name="Description">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="CharName" type="xsd:string" />
+              <xsd:element name="PlayerName" type="xsd:string" />
+              <xsd:element name="GenderValue" type="xsd:string" />
+              <xsd:element name="Age" type="xsd:unsignedByte" />
+              <xsd:element name="Height" type="xsd:string" />
+              <xsd:element name="Build" type="xsd:string" />
+              <xsd:element name="Hair" type="xsd:string" />
+              <xsd:element name="Eyes" type="xsd:string" />
+              <xsd:element name="OtherFeatures" />
+              <xsd:element name="Campaign" type="xsd:string"/>
+              <xsd:element name="Gender" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Characteristics">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element minOccurs="6" maxOccurs="6" name="CharCharacteristic">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Key" type="xsd:string" />
+                    <xsd:element name="Name" type="xsd:string" />
+                    <xsd:element name="Description" />
+                    <xsd:element name="Source" />
+                    <xsd:element name="Sources" />
+                    <xsd:element name="Custom" type="xsd:string" />
+                    <xsd:element name="Rank">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="ForSkills" type="xsd:boolean" />
+                          <xsd:element name="ForChars" type="xsd:boolean" />
+                          <xsd:element name="StartingRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="SpeciesRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="CareerRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="TalentRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="ObligationRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="DutyRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="AttachRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="ItemRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="CyberRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="PurchasedRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="CharRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="InjuryRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="NonCareerRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="GrantRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="DefWeaponRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="DefWeaponAttachRanks" type="xsd:unsignedByte" />
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Motivations">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="CharMotivation" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Key" type="xsd:unsignedByte" />
+                    <xsd:element name="Name" type="xsd:string" />
+                    <xsd:element name="Description" type="xsd:string"/>
+                    <xsd:element name="Source" />
+                    <xsd:element name="Sources" />
+                    <xsd:element name="Custom" type="xsd:string" />
+                    <xsd:element name="Notes" type="xsd:string"/>
+                    <xsd:element name="MotiveKey" type="xsd:string" />
+                    <xsd:element name="SpecMotiveKey" type="xsd:string" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Specializations">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="CharSpecialization" minOccurs="1" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Key" type="xsd:string" />
+                    <xsd:element name="Name" type="xsd:string" />
+                    <xsd:element name="Description" type="xsd:string"/>
+                    <xsd:element name="Source" />
+                    <xsd:element name="Sources" />
+                    <xsd:element name="Custom" type="xsd:string" />
+                    <xsd:element name="isStartingSpec" type="xsd:boolean" />
+                    <xsd:element name="isCareerSpec" type="xsd:boolean" />
+                    <xsd:element name="Talents">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element maxOccurs="unbounded" name="CharTalent">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="Key" type="xsd:string" />
+                                <xsd:element name="Col" type="xsd:unsignedByte" />
+                                <xsd:element name="Row" type="xsd:unsignedByte" />
+                                <xsd:element name="Purchased" type="xsd:boolean" />
+                                <xsd:element name="Free" type="xsd:boolean" />
+                                <xsd:element name="Ranks" type="xsd:unsignedByte" />
+                                <xsd:element name="BonusChars" />
+                                <xsd:element name="Sources" />
+                                <xsd:element name="CareerSkills" />
+                                <xsd:element name="SelectedSkills" />
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="ForcePowers">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="CharForcePower">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Key" type="xsd:string" />
+                    <xsd:element name="Name" type="xsd:string" />
+                    <xsd:element name="Description" />
+                    <xsd:element name="Source" />
+                    <xsd:element name="Sources" />
+                    <xsd:element name="Custom" type="xsd:string" />
+                    <xsd:element name="ForceAbilities">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element maxOccurs="unbounded" name="CharForceAbility">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="Key" type="xsd:string" />
+                                <xsd:element name="Col" type="xsd:unsignedByte" />
+                                <xsd:element name="Row" type="xsd:unsignedByte" />
+                                <xsd:element name="Span" type="xsd:unsignedByte" />
+                                <xsd:element name="Cost" type="xsd:unsignedByte" />
+                                <xsd:element name="Purchased" type="xsd:boolean" />
+                                <xsd:element name="Upgrades" type="xsd:unsignedByte" />
+                                <xsd:element name="Sources" />
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="MentorDiscount" type="xsd:boolean" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="SigAbilities" />
+        <xsd:element name="Skills">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="CharSkill">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Key" type="xsd:string" />
+                    <xsd:element name="Name" />
+                    <xsd:element name="Description" />
+                    <xsd:element name="Source" />
+                    <xsd:element name="Sources" />
+                    <xsd:element name="Custom" type="xsd:string" />
+                    <xsd:element name="Rank">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="ForSkills" type="xsd:boolean" />
+                          <xsd:element name="ForChars" type="xsd:boolean" />
+                          <xsd:element name="StartingRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="SpeciesRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="CareerRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="TalentRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="ObligationRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="DutyRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="AttachRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="ItemRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="CyberRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="PurchasedRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="CharRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="InjuryRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="NonCareerRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="GrantRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="DefWeaponRanks" type="xsd:unsignedByte" />
+                          <xsd:element name="DefWeaponAttachRanks" type="xsd:unsignedByte" />
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="isCareer" type="xsd:boolean" />
+                    <xsd:element name="CharKeyOverride" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="ObOptions">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="StartingSize" type="xsd:unsignedByte" />
+              <xsd:element name="Plus5XP" type="xsd:boolean" />
+              <xsd:element name="Plus10XP" type="xsd:boolean" />
+              <xsd:element name="Plus1000Cr" type="xsd:boolean" />
+              <xsd:element name="Plus2500Cr" type="xsd:boolean" />
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Obligations">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="CharObligation" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Key" type="xsd:unsignedByte" />
+                    <xsd:element name="Name" type="xsd:string" />
+                    <xsd:element name="Description" />
+                    <xsd:element name="Source" />
+                    <xsd:element name="Sources" />
+                    <xsd:element name="Custom" type="xsd:string" />
+                    <xsd:element name="Size" type="xsd:unsignedByte" />
+                    <xsd:element name="Notes" />
+                    <xsd:element name="ObKey" type="xsd:string" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="DutOptions">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="StartingSize" type="xsd:unsignedByte" />
+              <xsd:element name="Plus5XP" type="xsd:boolean" />
+              <xsd:element name="Plus10XP" type="xsd:boolean" />
+              <xsd:element name="Plus1000Cr" type="xsd:boolean" />
+              <xsd:element name="Plus2500Cr" type="xsd:boolean" />
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Duties">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="CharDuty" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Key" type="xsd:unsignedByte" />
+                    <xsd:element name="Name" type="xsd:string" />
+                    <xsd:element name="Description" />
+                    <xsd:element name="Source" />
+                    <xsd:element name="Sources" />
+                    <xsd:element name="Custom" type="xsd:string" />
+                    <xsd:element name="Size" type="xsd:unsignedByte" />
+                    <xsd:element name="Notes" />
+                    <xsd:element name="DutKey" type="xsd:string" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Experience">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="ExperienceRanks">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="ForSkills" type="xsd:boolean" />
+                    <xsd:element name="ForChars" type="xsd:boolean" />
+                    <xsd:element name="StartingRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="SpeciesRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CareerRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="TalentRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="ObligationRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DutyRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="AttachRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="ItemRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CyberRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="PurchasedRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CharRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="InjuryRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="NonCareerRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="GrantRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DefWeaponRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DefWeaponAttachRanks" type="xsd:unsignedByte" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="UsedExperience" type="xsd:unsignedByte" />
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Attributes">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="SoakValue">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="ForSkills" type="xsd:boolean" />
+                    <xsd:element name="ForChars" type="xsd:boolean" />
+                    <xsd:element name="StartingRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="SpeciesRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CareerRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="TalentRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="ObligationRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DutyRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="AttachRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="ItemRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CyberRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="PurchasedRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CharRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="InjuryRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="NonCareerRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="GrantRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DefWeaponRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DefWeaponAttachRanks" type="xsd:unsignedByte" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="WoundThreshold">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="ForSkills" type="xsd:boolean" />
+                    <xsd:element name="ForChars" type="xsd:boolean" />
+                    <xsd:element name="StartingRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="SpeciesRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CareerRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="TalentRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="ObligationRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DutyRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="AttachRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="ItemRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CyberRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="PurchasedRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CharRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="InjuryRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="NonCareerRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="GrantRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DefWeaponRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DefWeaponAttachRanks" type="xsd:unsignedByte" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="StrainThreshold">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="ForSkills" type="xsd:boolean" />
+                    <xsd:element name="ForChars" type="xsd:boolean" />
+                    <xsd:element name="StartingRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="SpeciesRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CareerRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="TalentRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="ObligationRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DutyRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="AttachRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="ItemRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CyberRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="PurchasedRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CharRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="InjuryRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="NonCareerRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="GrantRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DefWeaponRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DefWeaponAttachRanks" type="xsd:unsignedByte" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="DefenseRanged">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="ForSkills" type="xsd:boolean" />
+                    <xsd:element name="ForChars" type="xsd:boolean" />
+                    <xsd:element name="StartingRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="SpeciesRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CareerRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="TalentRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="ObligationRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DutyRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="AttachRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="ItemRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CyberRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="PurchasedRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CharRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="InjuryRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="NonCareerRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="GrantRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DefWeaponRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DefWeaponAttachRanks" type="xsd:unsignedByte" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="DefenseMelee">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="ForSkills" type="xsd:boolean" />
+                    <xsd:element name="ForChars" type="xsd:boolean" />
+                    <xsd:element name="StartingRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="SpeciesRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CareerRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="TalentRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="ObligationRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DutyRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="AttachRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="ItemRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CyberRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="PurchasedRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CharRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="InjuryRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="NonCareerRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="GrantRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DefWeaponRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DefWeaponAttachRanks" type="xsd:unsignedByte" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="ForceRating">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="ForSkills" type="xsd:boolean" />
+                    <xsd:element name="ForChars" type="xsd:boolean" />
+                    <xsd:element name="StartingRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="SpeciesRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CareerRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="TalentRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="ObligationRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DutyRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="AttachRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="ItemRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CyberRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="PurchasedRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="CharRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="InjuryRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="NonCareerRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="GrantRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DefWeaponRanks" type="xsd:unsignedByte" />
+                    <xsd:element name="DefWeaponAttachRanks" type="xsd:unsignedByte" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Species">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="SpeciesKey" type="xsd:string" />
+              <xsd:element name="SubSpeciesKey" />
+              <xsd:element name="SelectedOptions">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" name="CharOption">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="ChoiceKey" type="xsd:string" />
+                          <xsd:element name="OptionKey" type="xsd:string" />
+                          <xsd:element name="StartingChars">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="Brawn" type="xsd:unsignedByte" />
+                                <xsd:element name="Agility" type="xsd:unsignedByte" />
+                                <xsd:element name="Intellect" type="xsd:unsignedByte" />
+                                <xsd:element name="Cunning" type="xsd:unsignedByte" />
+                                <xsd:element name="Willpower" type="xsd:unsignedByte" />
+                                <xsd:element name="Presence" type="xsd:unsignedByte" />
+                                <xsd:element name="Requirement">
+                                  <xsd:complexType>
+                                    <xsd:sequence>
+                                      <xsd:element name="WearingArmor" type="xsd:boolean" />
+                                      <xsd:element name="Career" type="xsd:boolean" />
+                                      <xsd:element name="Specialization" type="xsd:boolean" />
+                                      <xsd:element name="NonCareer" type="xsd:boolean" />
+                                      <xsd:element name="SoakAtLeast" type="xsd:unsignedByte" />
+                                      <xsd:element name="WieldingMelee" type="xsd:boolean" />
+                                      <xsd:element name="WieldingBrawl" type="xsd:boolean" />
+                                      <xsd:element name="WieldingLightsaber" type="xsd:boolean" />
+                                    </xsd:sequence>
+                                  </xsd:complexType>
+                                </xsd:element>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                          <xsd:element name="StartingAttribs">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="WoundThreshold" type="xsd:unsignedByte" />
+                                <xsd:element name="StrainThreshold" type="xsd:unsignedByte" />
+                                <xsd:element name="DefenseRanged" type="xsd:unsignedByte" />
+                                <xsd:element name="DefenseMelee" type="xsd:unsignedByte" />
+                                <xsd:element name="SoakValue" type="xsd:unsignedByte" />
+                                <xsd:element name="Experience" type="xsd:unsignedByte" />
+                                <xsd:element name="ForceRating" type="xsd:unsignedByte" />
+                                <xsd:element name="Requirement">
+                                  <xsd:complexType>
+                                    <xsd:sequence>
+                                      <xsd:element name="WearingArmor" type="xsd:boolean" />
+                                      <xsd:element name="Career" type="xsd:boolean" />
+                                      <xsd:element name="Specialization" type="xsd:boolean" />
+                                      <xsd:element name="NonCareer" type="xsd:boolean" />
+                                      <xsd:element name="SoakAtLeast" type="xsd:unsignedByte" />
+                                      <xsd:element name="WieldingMelee" type="xsd:boolean" />
+                                      <xsd:element name="WieldingBrawl" type="xsd:boolean" />
+                                      <xsd:element name="WieldingLightsaber" type="xsd:boolean" />
+                                    </xsd:sequence>
+                                  </xsd:complexType>
+                                </xsd:element>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                          <xsd:element name="StartingSkillTraining" />
+                          <xsd:element name="SkillModifiers">
+                            <xsd:complexType>
+                              <xsd:sequence minOccurs="0">
+                                <xsd:element name="SkillModifier">
+                                  <xsd:complexType>
+                                    <xsd:sequence>
+                                      <xsd:element name="Key" type="xsd:string" />
+                                      <xsd:element name="SubSpeciesKey" />
+                                      <xsd:element name="RankStart" type="xsd:unsignedByte" />
+                                      <xsd:element name="RankAdd" type="xsd:unsignedByte" />
+                                      <xsd:element name="RankLimit" type="xsd:unsignedByte" />
+                                      <xsd:element name="isCareer" type="xsd:boolean" />
+                                      <xsd:element name="SkillType" />
+                                      <xsd:element name="Requirement">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="WearingArmor" type="xsd:boolean" />
+                                            <xsd:element name="Career" type="xsd:boolean" />
+                                            <xsd:element name="Specialization" type="xsd:boolean" />
+                                            <xsd:element name="NonCareer" type="xsd:boolean" />
+                                            <xsd:element name="SoakAtLeast" type="xsd:unsignedByte" />
+                                            <xsd:element name="WieldingMelee" type="xsd:boolean" />
+                                            <xsd:element name="WieldingBrawl" type="xsd:boolean" />
+                                            <xsd:element name="WieldingLightsaber" type="xsd:boolean" />
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                    </xsd:sequence>
+                                  </xsd:complexType>
+                                </xsd:element>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                          <xsd:element name="TalentModifiers" />
+                          <xsd:element name="DieModifiers" />
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="NonCareerSkills" />
+              <xsd:element name="SpeciesTalents" />
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Career">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="CareerKey" type="xsd:string" />
+              <xsd:element name="StartingSpecKey" type="xsd:string" />
+              <xsd:element name="CareerSkills">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" name="Key" type="xsd:string" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="CareerSpecSkills">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" name="Key" type="xsd:string" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Class">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="ClassKey" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Hook">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="HookKey" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Attitude">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="AttitudeKey" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Weapons">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="CharWeapon">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="ItemKey" type="xsd:string" />
+                    <xsd:element name="Key" type="xsd:string" />
+                    <xsd:element name="Equipped" type="xsd:boolean" />
+                    <xsd:element name="Held" type="xsd:boolean" />
+                    <xsd:element name="Count" type="xsd:unsignedByte" />
+                    <xsd:element name="PurchasedAttachments" />
+                    <xsd:element name="AddlHP" type="xsd:unsignedByte" />
+                    <xsd:element name="Notes" />
+                    <xsd:element name="Rename" />
+                    <xsd:element name="Prioritize" type="xsd:boolean" />
+                    <xsd:element name="HPPerItem" type="xsd:unsignedByte" />
+                    <xsd:element name="ItemDescriptorsFromAttachments" />
+                    <xsd:element name="AllItemDescriptors">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element maxOccurs="unbounded" name="ItemDescInfo">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="Key" type="xsd:string" />
+                                <xsd:element name="Count" type="xsd:unsignedByte" />
+                                <xsd:element name="Index" type="xsd:unsignedByte" />
+                                <xsd:element name="MiscDesc" />
+                                <xsd:element name="DefZoneValue" type="xsd:string" />
+                                <xsd:element name="QualReplace" type="xsd:boolean" />
+                                <xsd:element name="SkillIsCareer" type="xsd:boolean" />
+                                <xsd:element name="SkillIsRanked" type="xsd:boolean" />
+                                <xsd:element name="VehicleWeaponUpgrades" />
+                                <xsd:element name="SelectedVehicleWeaponIndex" type="xsd:byte" />
+                                <xsd:element name="DieModifiers" />
+                                <xsd:element name="InnateSkills" />
+                                <xsd:element name="ActiveQualityKey" />
+                                <xsd:element name="Failed" type="xsd:boolean" />
+                                <xsd:element name="DefZone" />
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="UsableAttachments" />
+                    <xsd:element name="TwoWeaponSets" />
+                    <xsd:element name="Shown" type="xsd:boolean" />
+                    <xsd:element name="Innate" type="xsd:boolean" />
+                    <xsd:element name="CrystalAttachments" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Armor">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="CharArmor">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="ItemKey" type="xsd:string" />
+                    <xsd:element name="Key" type="xsd:string" />
+                    <xsd:element name="Equipped" type="xsd:boolean" />
+                    <xsd:element name="Held" type="xsd:boolean" />
+                    <xsd:element name="Count" type="xsd:unsignedByte" />
+                    <xsd:element name="PurchasedAttachments" />
+                    <xsd:element name="AddlHP" type="xsd:unsignedByte" />
+                    <xsd:element name="Notes" />
+                    <xsd:element name="Rename" />
+                    <xsd:element name="Prioritize" type="xsd:boolean" />
+                    <xsd:element name="HPPerItem" type="xsd:unsignedByte" />
+                    <xsd:element name="ItemDescriptorsFromAttachments" />
+                    <xsd:element name="AllItemDescriptors">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="ItemDescInfo">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="Key" />
+                                <xsd:element name="Count" type="xsd:unsignedByte" />
+                                <xsd:element name="Index" type="xsd:unsignedByte" />
+                                <xsd:element name="MiscDesc" type="xsd:string" />
+                                <xsd:element name="DefZoneValue" type="xsd:string" />
+                                <xsd:element name="QualReplace" type="xsd:boolean" />
+                                <xsd:element name="SkillIsCareer" type="xsd:boolean" />
+                                <xsd:element name="SkillIsRanked" type="xsd:boolean" />
+                                <xsd:element name="VehicleWeaponUpgrades" />
+                                <xsd:element name="SelectedVehicleWeaponIndex" type="xsd:byte" />
+                                <xsd:element name="DieModifiers" />
+                                <xsd:element name="InnateSkills" />
+                                <xsd:element name="ActiveQualityKey" />
+                                <xsd:element name="Failed" type="xsd:boolean" />
+                                <xsd:element name="DefZone" />
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="UsableAttachments" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Gear">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="CharGear">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="ItemKey" type="xsd:string" />
+                    <xsd:element name="Key" type="xsd:string" />
+                    <xsd:element name="Equipped" type="xsd:boolean" />
+                    <xsd:element name="Held" type="xsd:boolean" />
+                    <xsd:element name="Count" type="xsd:unsignedByte" />
+                    <xsd:element name="PurchasedAttachments" />
+                    <xsd:element name="AddlHP" type="xsd:unsignedByte" />
+                    <xsd:element name="Notes" />
+                    <xsd:element name="Rename" />
+                    <xsd:element name="Prioritize" type="xsd:boolean" />
+                    <xsd:element name="HPPerItem" type="xsd:unsignedByte" />
+                    <xsd:element name="ItemDescriptorsFromAttachments" />
+                    <xsd:element name="AllItemDescriptors">
+                      <xsd:complexType>
+                        <xsd:sequence minOccurs="0">
+                          <xsd:element name="ItemDescInfo">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="Key" />
+                                <xsd:element name="Count" type="xsd:unsignedByte" />
+                                <xsd:element name="Index" type="xsd:unsignedByte" />
+                                <xsd:element name="MiscDesc" type="xsd:string" />
+                                <xsd:element name="DefZoneValue" type="xsd:string" />
+                                <xsd:element name="QualReplace" type="xsd:boolean" />
+                                <xsd:element name="SkillIsCareer" type="xsd:boolean" />
+                                <xsd:element name="SkillIsRanked" type="xsd:boolean" />
+                                <xsd:element name="VehicleWeaponUpgrades" />
+                                <xsd:element name="SelectedVehicleWeaponIndex" type="xsd:byte" />
+                                <xsd:element name="DieModifiers" />
+                                <xsd:element name="InnateSkills" />
+                                <xsd:element name="ActiveQualityKey" />
+                                <xsd:element name="Failed" type="xsd:boolean" />
+                                <xsd:element name="DefZone" />
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="UsableAttachments" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Vehicles" />
+        <xsd:element name="SummaryPriorities">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="TalentPriorities" />
+              <xsd:element name="ForcePriorities" />
+              <xsd:element name="ObligPriorities" />
+              <xsd:element name="DutyPriorities" />
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Story" />
+        <xsd:element name="Credits" type="xsd:unsignedByte" />
+        <xsd:element name="Morality">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Options">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Option" type="xsd:string" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="MoralityPairs">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="MoralityPair">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="StrengthKey" type="xsd:string" />
+                          <xsd:element name="WeaknessKey" type="xsd:string" />
+                          <xsd:element name="Notes" />
+                          <xsd:element name="Key" />
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="ModifiedMorality" type="xsd:unsignedByte" />
+              <xsd:element name="MoralityValue" type="xsd:unsignedByte" />
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Grants">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="UseGrants" type="xsd:boolean" />
+              <xsd:element name="FreeSpecs" />
+              <xsd:element name="FreeSkills" />
+              <xsd:element name="FreeTalents" />
+              <xsd:element name="FreeFR" type="xsd:boolean" />
+              <xsd:element name="FreeFRCount" type="xsd:unsignedByte" />
+              <xsd:element name="TalentCharWound" type="xsd:boolean" />
+              <xsd:element name="TalentCharStrain" type="xsd:boolean" />
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Rigger">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="VehicleKey" />
+              <xsd:element name="WeaponIndex" type="xsd:byte" />
+              <xsd:element name="custRigger">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="ChooseVehicle" type="xsd:boolean" />
+                    <xsd:element name="SilhouetteBase" type="xsd:unsignedByte" />
+                    <xsd:element name="SilhouetteAdd" type="xsd:unsignedByte" />
+                    <xsd:element name="BaseMods" />
+                    <xsd:element name="ChooseWeapon" type="xsd:boolean" />
+                    <xsd:element name="WeaponMods" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="MaxSilhouette" type="xsd:unsignedByte" />
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="UseGrants" type="xsd:boolean" />
+        <xsd:element name="Portrait" type="xsd:string" />
+        <xsd:element name="AutoRecalc" type="xsd:boolean" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xs:schema>
