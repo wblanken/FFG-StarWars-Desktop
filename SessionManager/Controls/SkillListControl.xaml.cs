@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using SessionManager.Dto;
+using SessionManager.Data.Model;
 
 namespace SessionManager.Controls
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SessionManager.Dto
+namespace SessionManager.Data.Model
 {
    [Serializable]
    public class Skill

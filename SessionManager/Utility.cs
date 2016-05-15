@@ -1,6 +1,5 @@
 using System.Windows;
 using SessionManager.Data;
-using SessionManager.Dto;
 
 namespace SessionManager
 {

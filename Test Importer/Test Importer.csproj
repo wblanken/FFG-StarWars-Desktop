@@ -50,17 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OggDudeData\OggDudeData.csproj">
-      <Project>{f983bd69-0d7d-45eb-84dd-f74ef958d2e5}</Project>
-      <Name>OggDudeData</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SessionManager.Data\SessionManager.Data.csproj">
       <Project>{fe842843-4d69-4f63-abde-c2979d0cab6a}</Project>
       <Name>SessionManager.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SessionManager.Dto\SessionManager.Dto.csproj">
-      <Project>{3a2ade17-e6e9-4442-9435-f195d3992ad5}</Project>
-      <Name>SessionManager.Dto</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

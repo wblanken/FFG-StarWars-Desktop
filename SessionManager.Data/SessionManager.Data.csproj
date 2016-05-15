@@ -41,20 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CharacterData.cs" />
-    <Compile Include="Converter.cs" />
     <Compile Include="ICharacterData.cs" />
+    <Compile Include="Model\Character.cs" />
+    <Compile Include="Model\Skill.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strings.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\OggDudeData\OggDudeData.csproj">
-      <Project>{f983bd69-0d7d-45eb-84dd-f74ef958d2e5}</Project>
-      <Name>OggDudeData</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SessionManager.Dto\SessionManager.Dto.csproj">
-      <Project>{3a2ade17-e6e9-4442-9435-f195d3992ad5}</Project>
-      <Name>SessionManager.Dto</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

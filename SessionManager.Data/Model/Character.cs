@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SessionManager.Dto
+namespace SessionManager.Data.Model
 {
    public class Character
    {

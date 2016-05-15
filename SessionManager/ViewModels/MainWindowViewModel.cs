@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
 using SessionManager.Data;
-using SessionManager.Dto;
+using SessionManager.Data.Model;
 
 namespace SessionManager.ViewModels
 {
