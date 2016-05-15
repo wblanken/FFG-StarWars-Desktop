@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using SessionManager.Data;
 
 namespace SessionManager.Controls
 {
@@ -14,7 +15,7 @@ namespace SessionManager.Controls
       }
 
       public static DependencyProperty HeaderProperty =
-         DependencyProperty.Register(Properties.Resources.Header, typeof(string), typeof(SectionHeader));
+         DependencyProperty.Register(Strings.Header, typeof(string), typeof(SectionHeader));
 
       public string Header
       {

@@ -1,39 +1,33 @@
-using System;
-using System.Linq.Expressions;
 using System.Windows;
+using SessionManager.Data;
 using SessionManager.Dto;
 
 namespace SessionManager
 {
    public class Utility
    {
-      public static string GetNameOf<T>(Expression<Func<T>> property)
-      {
-         return (property.Body as MemberExpression).Member.Name;
-      }
-
-      public static string GetSkillCharacteristicName(Characteristic characteristic)
+      public static string GetSkillCharacteristicName(string characteristicName)
       {
          var name = string.Empty;
-         switch (characteristic)
+         switch (characteristicName)
          {
-            case Characteristic.Brawn:
-               name = Utility.GetNameOf(() => Properties.Resources.Br);
+            case Strings.Brawn:
+               name = "Br";
                break;
-            case Characteristic.Agility:
-               name = Utility.GetNameOf(() => Properties.Resources.Ag);
+            case Strings.Agility:
+               name = "Ag";
                break;
-            case Characteristic.Intellect:
-               name = Utility.GetNameOf(() => Properties.Resources.Int);
+            case Strings.Intellect:
+               name = "Int";
                break;
-            case Characteristic.Cunning:
-               name = Utility.GetNameOf(() => Properties.Resources.Cun);
+            case Strings.Cunning:
+               name = "Cun";
                break;
-            case Characteristic.Willpower:
-               name = Utility.GetNameOf(() => Properties.Resources.Wil);
+            case Strings.Willpower:
+               name = "Wil";
                break;
-            case Characteristic.Presence:
-               name = Utility.GetNameOf(() => Properties.Resources.Pr);
+            case Strings.Presence:
+               name = "Pr";
                break;
          }
          return name;
@@ -53,7 +47,7 @@ namespace SessionManager
 
       public object Data
       {
-         get { return (object)GetValue(DataProperty); }
+         get { return GetValue(DataProperty); }
          set { SetValue(DataProperty, value); }
       }
 

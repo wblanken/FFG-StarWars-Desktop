@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace SessionManager.Dto
 {
@@ -30,9 +31,20 @@ namespace SessionManager.Dto
       public int MeleeDefense { get; set; }
       public int ForceRating { get; set; }
 
+      // Obligation, Duty, Morality
+
       // Skills
       public List<Skill> GeneralSkills { get; set; }
       public List<Skill> CombatSkills { get; set; }
       public List<Skill> KnowledgeSkills { get; set; }
+      
+      // Talents
+
+      // Inventory
+
+      // FileInfo
+      public string FileName { get; set; }
+      public Guid Id { get; set; }
+      public DateTime LastModified { get; set; }
    }
 }

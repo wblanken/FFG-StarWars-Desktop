@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:strings="clr-namespace:SessionManager.Properties"
+             xmlns:data="clr-namespace:SessionManager.Data;assembly=SessionManager.Data"
              xmlns:controls="clr-namespace:SessionManager.Controls" 
              xmlns:utility="clr-namespace:SessionManager"
              xmlns:converters="clr-namespace:SessionManager.Converters"
@@ -32,18 +32,18 @@
                 <DataGridTextColumn.Binding>
                     <MultiBinding Converter="{StaticResource SkillNameConverter}">
                         <Binding Path="Name"/>
-                        <Binding Path="Characteristic"/>
+                        <Binding Path="CharacteristicName"/>
                     </MultiBinding>
                 </DataGridTextColumn.Binding>
             </DataGridTextColumn>
             <DataGridCheckBoxColumn Header="{Binding Converter={StaticResource StringToUpperConverter}, 
-                                             Source={x:Static strings:Resources.Career}}"
+                                             Source={x:Static data:Strings.Career}}"
                                     Binding="{Binding Career}"/>
             <DataGridTextColumn Header="{Binding Converter={StaticResource StringToUpperConverter}, 
-                                         Source={x:Static strings:Resources.Rank}}"
+                                         Source={x:Static data:Strings.Rank}}"
                                 Binding="{Binding Rank}"/>
             <DataGridTemplateColumn Header="{Binding Converter={StaticResource StringToUpperConverter}, 
-                                             Source={x:Static strings:Resources.DicePool}}" Width="*">
+                                             Source={x:Static data:Strings.DicePool}}" Width="*">
                 <DataGridTemplateColumn.CellTemplate>
                     <DataTemplate>
                         <ContentPresenter>

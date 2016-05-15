@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using SessionManager.Data;
 using SessionManager.Dto;
 
 namespace SessionManager
@@ -36,176 +37,176 @@ namespace SessionManager
             {
                new Skill
                {
-                  Name = Properties.Resources.Astrogation,
-                  Characteristic = Characteristic.Intellect,
+                  Name = Strings.Astrogation,
+                  CharacteristicName = Strings.Intellect,
                   Career = true,
                   Rank = 1,
                   CharacteristicValue = character.Intellect
                },
                new Skill
                {
-                  Name = Properties.Resources.Athletics,
-                  Characteristic = Characteristic.Brawn,
+                  Name = Strings.Athletics,
+                  CharacteristicName = Strings.Brawn,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Brawn
                },
                new Skill
                {
-                  Name = Properties.Resources.Charm,
-                  Characteristic = Characteristic.Presence,
+                  Name = Strings.Charm,
+                  CharacteristicName = Strings.Presence,
                   Career = false,
                   Rank = 1,
                   CharacteristicValue = character.Presence
                },
                new Skill
                {
-                  Name = Properties.Resources.Coercion,
-                  Characteristic = Characteristic.Willpower,
+                  Name = Strings.Coercion,
+                  CharacteristicName = Strings.Willpower,
                   Career = true,
                   Rank = 0,
                   CharacteristicValue = character.Willpower
                },
                new Skill
                {
-                  Name = Properties.Resources.Computers,
-                  Characteristic = Characteristic.Intellect,
+                  Name = Strings.Computers,
+                  CharacteristicName = Strings.Intellect,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Intellect
                },
                new Skill
                {
-                  Name = Properties.Resources.Cool,
-                  Characteristic = Characteristic.Presence,
+                  Name = Strings.Cool,
+                  CharacteristicName = Strings.Presence,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Presence
                },
                new Skill
                {
-                  Name = Properties.Resources.Coordination,
-                  Characteristic = Characteristic.Agility,
+                  Name = Strings.Coordination,
+                  CharacteristicName = Strings.Agility,
                   Career = true,
                   Rank = 0,
                   CharacteristicValue = character.Agility
                },
                new Skill
                {
-                  Name = Properties.Resources.Deception,
-                  Characteristic = Characteristic.Cunning,
+                  Name = Strings.Deception,
+                  CharacteristicName = Strings.Cunning,
                   Career = true,
                   Rank = 1,
                   CharacteristicValue = character.Cunning
                },
                new Skill
                {
-                  Name = Properties.Resources.Discipline,
-                  Characteristic = Characteristic.Willpower,
+                  Name = Strings.Discipline,
+                  CharacteristicName = Strings.Willpower,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Willpower
                },
                new Skill
                {
-                  Name = Properties.Resources.Leadership,
-                  Characteristic = Characteristic.Presence,
+                  Name = Strings.Leadership,
+                  CharacteristicName = Strings.Presence,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Presence
                },
                new Skill
                {
-                  Name = Properties.Resources.Mechanics,
-                  Characteristic = Characteristic.Intellect,
+                  Name = Strings.Mechanics,
+                  CharacteristicName = Strings.Intellect,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Intellect
                },
                new Skill
                {
-                  Name = Properties.Resources.Medicine,
-                  Characteristic = Characteristic.Intellect,
+                  Name = Strings.Medicine,
+                  CharacteristicName = Strings.Intellect,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Intellect
                },
                new Skill
                {
-                  Name = Properties.Resources.Negotiation,
-                  Characteristic = Characteristic.Presence,
+                  Name = Strings.Negotiation,
+                  CharacteristicName = Strings.Presence,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Presence
                },
                new Skill
                {
-                  Name = Properties.Resources.Perception,
-                  Characteristic = Characteristic.Cunning,
+                  Name = Strings.Perception,
+                  CharacteristicName = Strings.Cunning,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Cunning
                },
                new Skill
                {
-                  Name = $"{Properties.Resources.Piloting} - {Properties.Resources.Planetary}",
-                  Characteristic = Characteristic.Agility,
+                  Name = $"{Strings.Piloting} - {Strings.Planetary}",
+                  CharacteristicName = Strings.Agility,
                   Career = true,
                   Rank = 0,
                   CharacteristicValue = character.Agility
                },
                new Skill
                {
-                  Name = $"{Properties.Resources.Piloting} - {Properties.Resources.Space}",
-                  Characteristic = Characteristic.Agility,
+                  Name = $"{Strings.Piloting} - {Strings.Space}",
+                  CharacteristicName = Strings.Agility,
                   Career = true,
                   Rank = 2,
                   CharacteristicValue = character.Agility
                },
                new Skill
                {
-                  Name = Properties.Resources.Resilience,
-                  Characteristic = Characteristic.Brawn,
+                  Name = Strings.Resilience,
+                  CharacteristicName = Strings.Brawn,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Brawn
                },
                new Skill
                {
-                  Name = Properties.Resources.Skulduggery,
-                  Characteristic = Characteristic.Cunning,
+                  Name = Strings.Skulduggery,
+                  CharacteristicName = Strings.Cunning,
                   Career = true,
                   Rank = 0,
                   CharacteristicValue = character.Cunning
                },
                new Skill
                {
-                  Name = Properties.Resources.Stealth,
-                  Characteristic = Characteristic.Agility,
+                  Name = Strings.Stealth,
+                  CharacteristicName = Strings.Agility,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Agility
                },
                new Skill
                {
-                  Name = Properties.Resources.Streetwise,
-                  Characteristic = Characteristic.Cunning,
+                  Name = Strings.Streetwise,
+                  CharacteristicName = Strings.Cunning,
                   Career = true,
                   Rank = 0,
                   CharacteristicValue = character.Cunning
                },
                new Skill
                {
-                  Name = Properties.Resources.Survival,
-                  Characteristic = Characteristic.Cunning,
+                  Name = Strings.Survival,
+                  CharacteristicName = Strings.Cunning,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Cunning
                },
                new Skill
                {
-                  Name = Properties.Resources.Vigilance,
-                  Characteristic = Characteristic.Willpower,
+                  Name = Strings.Vigilance,
+                  CharacteristicName = Strings.Willpower,
                   Career = true,
                   Rank = 1,
                   CharacteristicValue = character.Willpower
@@ -216,40 +217,40 @@ namespace SessionManager
             {
                new Skill
                {
-                  Name = Properties.Resources.Brawl,
-                  Characteristic = Characteristic.Brawn,
+                  Name = Strings.Brawl,
+                  CharacteristicName = Strings.Brawn,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Brawn
                },
                new Skill
                {
-                  Name = Properties.Resources.Gunnery,
-                  Characteristic = Characteristic.Agility,
+                  Name = Strings.Gunnery,
+                  CharacteristicName = Strings.Agility,
                   Career = true,
                   Rank = 0,
                   CharacteristicValue = character.Agility
                },
                new Skill
                {
-                  Name = Properties.Resources.Melee,
-                  Characteristic = Characteristic.Brawn,
+                  Name = Strings.Melee,
+                  CharacteristicName = Strings.Brawn,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Brawn
                },
                new Skill
                {
-                  Name = $"{Properties.Resources.Ranged} - {Properties.Resources.Light}",
-                  Characteristic = Characteristic.Agility,
+                  Name = $"{Strings.Ranged} - {Strings.Light}",
+                  CharacteristicName = Strings.Agility,
                   Career = false,
                   Rank = 1,
                   CharacteristicValue = character.Agility
                },
                new Skill
                {
-                  Name = $"{Properties.Resources.Ranged} - {Properties.Resources.Heavy}",
-                  Characteristic = Characteristic.Agility,
+                  Name = $"{Strings.Ranged} - {Strings.Heavy}",
+                  CharacteristicName = Strings.Agility,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Agility
@@ -260,48 +261,48 @@ namespace SessionManager
             {
                new Skill
                {
-                  Name = Properties.Resources.CoreWorlds,
-                  Characteristic = Characteristic.Intellect,
+                  Name = Strings.CoreWorlds,
+                  CharacteristicName = Strings.Intellect,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Intellect
                },
                new Skill
                {
-                  Name = Properties.Resources.Education,
-                  Characteristic = Characteristic.Intellect,
+                  Name = Strings.Education,
+                  CharacteristicName = Strings.Intellect,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Intellect
                },
                new Skill
                {
-                  Name = Properties.Resources.Lore,
-                  Characteristic = Characteristic.Intellect,
+                  Name = Strings.Lore,
+                  CharacteristicName = Strings.Intellect,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Intellect
                },
                new Skill
                {
-                  Name = Properties.Resources.OuterRim,
-                  Characteristic = Characteristic.Intellect,
+                  Name = Strings.OuterRim,
+                  CharacteristicName = Strings.Intellect,
                   Career = true,
                   Rank = 0,
                   CharacteristicValue = character.Intellect
                },
                new Skill
                {
-                  Name = Properties.Resources.Underworld,
-                  Characteristic = Characteristic.Intellect,
+                  Name = Strings.Underworld,
+                  CharacteristicName = Strings.Intellect,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Intellect
                },
                new Skill
                {
-                  Name = Properties.Resources.Xenology,
-                  Characteristic = Characteristic.Intellect,
+                  Name = Strings.Xenology,
+                  CharacteristicName = Strings.Intellect,
                   Career = false,
                   Rank = 0,
                   CharacteristicValue = character.Intellect
