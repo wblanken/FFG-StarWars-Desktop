@@ -9,6 +9,7 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.Drawing;
 using System.Xml;
 using System.Xml.Serialization;
 
@@ -87,7 +88,7 @@ namespace OggDudeData.Model
 
       private object storyField;
 
-      private byte creditsField;
+      private short creditsField;
 
       private CharacterMorality moralityField;
 
@@ -97,7 +98,7 @@ namespace OggDudeData.Model
 
       private bool useGrantsField;
 
-      private string portraitField;
+      private Byte[] portraitField;
 
       private bool autoRecalcField;
 
@@ -315,7 +316,7 @@ namespace OggDudeData.Model
       }
 
       /// <remarks/>
-      public byte Credits
+      public short Credits
       {
          get { return this.creditsField; }
          set { this.creditsField = value; }
@@ -350,7 +351,7 @@ namespace OggDudeData.Model
       }
 
       /// <remarks/>
-      public string Portrait
+      public Byte[] Portrait
       {
          get { return this.portraitField; }
          set { this.portraitField = value; }
@@ -3937,9 +3938,9 @@ namespace OggDudeData.Model
 
       private CharacterMoralityMoralityPairs moralityPairsField;
 
-      private byte modifiedMoralityField;
+      private short modifiedMoralityField;
 
-      private byte moralityValueField;
+      private short moralityValueField;
 
       /// <remarks/>
       public CharacterMoralityOptions Options
@@ -3956,14 +3957,14 @@ namespace OggDudeData.Model
       }
 
       /// <remarks/>
-      public byte ModifiedMorality
+      public short ModifiedMorality
       {
          get { return this.modifiedMoralityField; }
          set { this.modifiedMoralityField = value; }
       }
 
       /// <remarks/>
-      public byte MoralityValue
+      public short MoralityValue
       {
          get { return this.moralityValueField; }
          set { this.moralityValueField = value; }

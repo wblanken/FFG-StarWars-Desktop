@@ -1,15 +1,19 @@
 ﻿// Copyright (c) 2016 Will Blankenship, Inc.  All Rights Reserved.
 
+using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Xml.Serialization;
+using System.Xml.Linq;
 using OggDudeData.Model;
 
 namespace OggDudeData
 {
    public static class ImportData
    {
-      private const string AppDataPath =
-         @"C:\Users\Will\AppData\Local\Apps\2.0\O0VVP9N3.2VV\PZY921LQ.5Q2\swch..tion_0000000000000000_0001.0006_e7f2ca33d94ec618\Data\";
+      public static string AppDataPath { get; set; }
+      public static string DataPath { get; set; }
 
       public static Character LoadCharacter(string filePath)
       {
@@ -17,9 +21,41 @@ namespace OggDudeData
          using (var file = new FileStream(filePath, FileMode.Open,
                FileAccess.Read))
          {
+            /*var position = 8192;
+            file.Seek(position, SeekOrigin.Begin);
+            var test = new Byte[file.Length - position];
+            file.Read(test, 0, (int)file.Length - position);
+
+            var s = System.Text.Encoding.UTF8.GetString(test);*/
+
             var character = (Character)serializer.Deserialize(file);
             return character;
          }
+      }
+
+      public static IList<Character> LoadCharacters(string campaign)
+      {
+         var characters = new List<Character>();
+
+         foreach (var file in Directory.EnumerateFiles($"{DataPath}Characters", "*.xml"))
+         {
+            var character = LoadCharacter(file);
+            if (campaign == null)
+            {
+               characters.Add(character);
+            }
+            else
+            {
+               if (character.Description.Campaign == campaign)
+               {
+                  characters.Add(character);
+               }
+            }
+         }
+
+         
+
+         return characters;
       }
 
       /*public static void WriteCharacter(Character chracter)
@@ -46,6 +82,32 @@ namespace OggDudeData
             var characteristics = (Characteristics) serializer.Deserialize(file);
             return characteristics;
          }
+      }
+
+      public static string LoadSpeciesFromTag(string speciesTag)
+      {
+         foreach (var file in Directory.EnumerateFiles($"{AppDataPath}Species\\", $"{speciesTag[0]}*.xml"))
+         {
+            var doc = XDocument.Load(file);
+            if (doc.Root.Descendants("Key").First().Value == speciesTag)
+            {
+               return doc.Root.Descendants("Name").First().Value;
+            }
+         }
+         return string.Empty;
+      }
+
+      public static string LoadCareerFromTag(string careerTag)
+      {
+         foreach (var file in Directory.EnumerateFiles($"{AppDataPath}Careers\\", $"{careerTag[0]}*.xml"))
+         {
+            var doc = XDocument.Load(file);
+            if (doc.Root.Descendants("Key").First().Value == careerTag)
+            {
+               return doc.Root.Descendants("Name").First().Value;
+            }
+         }
+         return string.Empty;
       }
    }
 }

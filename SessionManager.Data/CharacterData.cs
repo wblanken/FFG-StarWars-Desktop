@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using SessionManager.Dto;
 
 namespace SessionManager.Data
@@ -7,7 +8,12 @@ namespace SessionManager.Data
    {
       public IList<Character> GetCharacters(string dataFolder, string appFolder, string campaign = null)
       {
-         return null;
+         OggDudeData.ImportData.DataPath = dataFolder;
+         OggDudeData.ImportData.AppDataPath = appFolder;
+
+         return OggDudeData.ImportData.LoadCharacters(campaign)
+                  .Select(Converter.OggCharacterConverter)
+                  .ToList();
       }
    }
 }

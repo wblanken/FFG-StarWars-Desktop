@@ -17,15 +17,16 @@ namespace SessionManager.Data
             Name = oggCharacter.Description.CharName,
             PlayerName = oggCharacter.Description.PlayerName,
             Gender = oggCharacter.Description.Gender,
-            Career = oggCharacter.Career.CareerKey, //TODO
+            Career = OggDudeData.ImportData.LoadCareerFromTag(oggCharacter.Career.CareerKey),
             Specializations = string.Join(",", oggCharacter.Specializations.Select(s => s.Name)),
-            Species = oggCharacter.Species.SpeciesKey, //TODO
-            Brawn = oggCharacter.Characteristics.SingleOrDefault(c => c.Name == Strings.Brawn).Rank.TotalRank,
-            Agility = oggCharacter.Characteristics.SingleOrDefault(c => c.Name == Strings.Agility).Rank.TotalRank,
-            Intellect = oggCharacter.Characteristics.SingleOrDefault(c => c.Name == Strings.Intellect).Rank.TotalRank,
-            Willpower = oggCharacter.Characteristics.SingleOrDefault(c => c.Name == Strings.Willpower).Rank.TotalRank,
-            Cunning = oggCharacter.Characteristics.SingleOrDefault(c => c.Name == Strings.Cunning).Rank.TotalRank,
-            Presence = oggCharacter.Characteristics.SingleOrDefault(c => c.Name == Strings.Presence).Rank.TotalRank,
+            Species = OggDudeData.ImportData.LoadSpeciesFromTag(oggCharacter.Species.SpeciesKey),
+            Campaign = oggCharacter.Description.Campaign,
+            Brawn = oggCharacter.Characteristics.Single(c => c.Name == Strings.Brawn).Rank.TotalRank,
+            Agility = oggCharacter.Characteristics.Single(c => c.Name == Strings.Agility).Rank.TotalRank,
+            Intellect = oggCharacter.Characteristics.Single(c => c.Name == Strings.Intellect).Rank.TotalRank,
+            Willpower = oggCharacter.Characteristics.Single(c => c.Name == Strings.Willpower).Rank.TotalRank,
+            Cunning = oggCharacter.Characteristics.Single(c => c.Name == Strings.Cunning).Rank.TotalRank,
+            Presence = oggCharacter.Characteristics.Single(c => c.Name == Strings.Presence).Rank.TotalRank,
             WoundsThreshold = oggCharacter.Attributes.WoundThreshold.Total,
             StrainThreshold = oggCharacter.Attributes.StrainThreshold.Total,
             Soak = oggCharacter.Attributes.SoakValue.Total,
@@ -44,6 +45,8 @@ namespace SessionManager.Data
          foreach (var skill in oggCharacter.Skills)
          {
             var convSkill = OggCharacterSkillConverter(skill);
+            convSkill.Value.CharacteristicValue =
+               oggCharacter.Characteristics.Single(s => s.Name == convSkill.Value.CharacteristicName).Rank.TotalRank;
 
             switch (convSkill.Key)
             {

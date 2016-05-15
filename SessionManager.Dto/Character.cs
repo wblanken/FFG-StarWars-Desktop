@@ -12,6 +12,7 @@ namespace SessionManager.Dto
       public string PlayerName { get; set;}
       public string Career { get; set;}
       public string Gender { get; set;}
+      public string Campaign { get; set;}
 
       // Characteristics
       public int Brawn { get; set; }

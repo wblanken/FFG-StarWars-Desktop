@@ -1,7 +1,12 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SessionManager.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AppDataFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\Will\AppData\Local\Apps\2.0\O0VVP9N3.2VV\PZY921LQ.5Q2\swch..tion_0000000000000000_0001.0006_e7f2ca33d94ec618\Data\</Value>
+    </Setting>
+    <Setting Name="DataFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\Will\AppData\Roaming\SWCharGen\</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

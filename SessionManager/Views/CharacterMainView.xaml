@@ -126,15 +126,16 @@
                                        SkillListName="{x:Static data:Strings.General}" 
                                        SkillList="{Binding Character.GeneralSkills}"/>
                 <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="2" >
-                    <controls:SkillListControl Grid.Row="0" Grid.Column="2" 
-                                               SkillListName="{x:Static data:Strings.Combat}" 
+                    <controls:SkillListControl SkillListName="{x:Static data:Strings.Combat}" 
                                                SkillList="{Binding Character.CombatSkills}"
                                                Margin="0,0,0,20"/>
-                    <controls:SkillListControl Grid.Row="1" Grid.Column="2" 
-                                               SkillListName="{x:Static data:Strings.Knowledge}" 
+                    <controls:SkillListControl SkillListName="{x:Static data:Strings.Knowledge}" 
                                                SkillList="{Binding Character.KnowledgeSkills}"/>
                 </StackPanel>
             </Grid>
         </Grid>
+        
+        <!-- Weapons -->
+        
     </Grid>
 </UserControl>

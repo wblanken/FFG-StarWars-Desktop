@@ -787,7 +787,7 @@
           </xsd:complexType>
         </xsd:element>
         <xsd:element name="Story" />
-        <xsd:element name="Credits" type="xsd:unsignedByte" />
+        <xsd:element name="Credits" type="xsd:unsignedShort" />
         <xsd:element name="Morality">
           <xsd:complexType>
             <xsd:sequence>
@@ -814,8 +814,8 @@
                   </xsd:sequence>
                 </xsd:complexType>
               </xsd:element>
-              <xsd:element name="ModifiedMorality" type="xsd:unsignedByte" />
-              <xsd:element name="MoralityValue" type="xsd:unsignedByte" />
+              <xsd:element name="ModifiedMorality" type="xsd:unsignedShort" />
+              <xsd:element name="MoralityValue" type="xsd:unsignedShort" />
             </xsd:sequence>
           </xsd:complexType>
         </xsd:element>
