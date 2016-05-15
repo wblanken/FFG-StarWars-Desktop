@@ -44,10 +44,23 @@
     <Compile Include="Model\Character.cs">
       <DependentUpon>Character.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Model\Characteristics.cs">
+      <DependentUpon>Characteristics.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Skills.cs">
+      <SubType>code</SubType>
+      <DependentUpon>Skills.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Model\Character.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Model\Characteristics.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Model\Skills.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

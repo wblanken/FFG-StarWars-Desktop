@@ -1438,6 +1438,17 @@ namespace OggDudeData.Model
          get { return this.defWeaponAttachRanksField; }
          set { this.defWeaponAttachRanksField = value; }
       }
+
+      public int Total
+      {
+         get
+         {
+            return startingRanksField + speciesRanksField + careerRanksField + talentRanksField + obligationRanksField +
+                   dutyRanksField + attachRanksField + itemRanksField + cyberRanksField + purchasedRanksField +
+                   charRanksField + injuryRanksField + nonCareerRanksField + grantRanksField + defWeaponRanksField +
+                   defWeaponAttachRanksField;
+         }
+      }
    }
 
    /// <remarks/>
