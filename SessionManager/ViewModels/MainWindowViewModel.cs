@@ -9,8 +9,13 @@ namespace SessionManager.ViewModels
 {
    public class MainWindowViewModel : ViewModelBase
    {
+      private ObservableCollection<Character> _characters;
+      private Character _character;
+
       public MainWindowViewModel()
-      {}
+      {
+         ImportData();
+      }
 
       public ObservableCollection<UserControl> Tabs { get; set; }
 
@@ -23,13 +28,31 @@ namespace SessionManager.ViewModels
       {
          Task.Run(() =>
          {
-            var data = new CharacterData();
-            Characters = new ObservableCollection<Character>(data.GetCharacters(Properties.Settings.Default.DataFolder,
+            Characters = new ObservableCollection<Character>(CharacterData.GetCharacters(Properties.Settings.Default.DataFolder,
                Properties.Settings.Default.AppDataFolder));
-            return;
          });
       }
 
-      public ObservableCollection<Character> Characters { get; set; }
+      public ObservableCollection<Character> Characters
+      {
+         get { return _characters; }
+         set
+         {
+            if (Equals(value, _characters)) return;
+            _characters = value;
+            OnPropertyChanged(nameof(Characters));
+         }
+      }
+
+      public Character Character
+      {
+         get { return _character; }
+         set
+         {
+            if(Equals(value, _character)) return;
+            _character = value;
+            OnPropertyChanged(nameof(Character));
+         }
+      }
    }
 }

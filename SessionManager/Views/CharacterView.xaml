@@ -9,15 +9,19 @@
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="700"
              d:DataContext="{d:DesignInstance Type=sessionManager:PashDemoCharacter, IsDesignTimeCreatable=True}">
-    <UserControl.DataContext>
+    <!--<UserControl.DataContext>
         <vm:CharacterViewModel/>
-    </UserControl.DataContext>
+    </UserControl.DataContext>-->
     
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         
         <Grid HorizontalAlignment="Stretch" Margin="5,0,5,5">
             <Grid.ColumnDefinitions>
@@ -43,7 +47,7 @@
                 <TextBlock Text="{Binding Character.Gender}"/>
             </UniformGrid>
         </Grid>
-        <TabControl Grid.Row="1">
+        <TabControl Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
             <TabItem Header="Main">
                 <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
                     <views:CharacterMainView/>

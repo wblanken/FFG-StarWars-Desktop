@@ -8,16 +8,62 @@ using SessionManager.Data.Model;
 
 namespace SessionManager.Data
 {
-   public class CharacterData : ICharacterData
+   public static class CharacterData
    {
-      public Character GetCharacter(string characterFile, string appFolder)
+      /// <summary>
+      /// Loads a given character file into memory and populates all its data.
+      /// </summary>
+      /// <param name="characterFile">The character file</param>
+      /// <param name="appFolder">The app folder for OggDude's tools</param>
+      public static Character GetCharacter(string characterFile, string appFolder)
       {
          var doc = XDocument.Load(characterFile);
+         var character = ExtractCharacterData(appFolder, doc);
+         ExtractCharacterSkills(appFolder, doc.Root.Element("Skills"), ref character);
+
+         return character;
+      }
+
+      /// <summary>
+      /// Gets a list of all characters, can be filtered by campagin
+      /// </summary>
+      /// <param name="dataFolder">The data folder for OggDude's tools</param>
+      /// <param name="appFolder">The app folder for OggDude's tools</param>
+      /// <param name="campaign">Campaign filter</param>
+      public static IList<Character> GetCharacters(string dataFolder, string appFolder, string campaign = null)
+      {
+         var characters = new List<Character>();
+
+         foreach (var file in Directory.EnumerateFiles(Path.Combine(dataFolder, "Characters"), "*.xml"))
+         {
+            if (campaign == null)
+            {
+               characters.Add(GetCharacter(file, appFolder));
+            }
+            else
+            {
+               if (XDocument.Load(file).Descendants("Campaign").First().Value == campaign)
+               {
+                  characters.Add(GetCharacter(file, appFolder));
+               }
+            }
+         }
+         return characters;
+      }
+
+      /// <summary>
+      /// Pulls character data out of an OggDude character xml
+      /// </summary>
+      /// <param name="appFolder">The app folder for OggDude's tools</param>
+      /// <param name="doc">The character xml data</param>
+      /// <returns>Populated character class</returns>
+      private static Character ExtractCharacterData(string appFolder, XDocument doc)
+      {
          var character = new Character
          {
             Name = doc.Descendants("CharName").First().Value,
             PlayerName = doc.Descendants("PlayerName").First().Value,
-            Gender = doc.Descendants("GenderValue").First().Value,
+            Gender = doc.Descendants("Gender").First().Value,
             Career = LoadCareerFromTag(doc.Root.Element("Career").Elements("CareerKey").First().Value, appFolder),
             Specializations = string.Join(",",
                doc.Root.Elements("Specializations")
@@ -69,35 +115,52 @@ namespace SessionManager.Data
             Id = Guid.Parse(doc.Root.Element("Key").Value),
             LastModified = DateTime.Parse(doc.Root.Element("LastChanged").Value)
          };
-
          return character;
       }
 
       /// <summary>
-      /// Gets a list of all characters, can be filtered by campagin
+      /// Extracts skill data from OggDude data and populates the skill lists in a character
       /// </summary>
-      /// <param name="dataFolder">The data folder for OggDude's tools</param>
       /// <param name="appFolder">The app folder for OggDude's tools</param>
-      /// <param name="campaign">Campaign filter</param>
-      public IList<Character> GetCharacters(string dataFolder, string appFolder, string campaign = null)
+      /// <param name="skills">The character's skills node</param>
+      /// <param name="character">The character data to be updated, 
+      /// needs to have characteristic data populated already</param>
+      private static void ExtractCharacterSkills(string appFolder, XContainer skills, ref Character character)
       {
-         var characters = new List<Character>();
-
-         foreach (var file in Directory.EnumerateFiles(Path.Combine(dataFolder, "Characters"), "*.xml"))
+         var skillData = XDocument.Load(Path.Combine(appFolder, "Skills.xml"));
+         var characteristicData = XDocument.Load(Path.Combine(appFolder, "Characteristics.xml"));
+         foreach (var element in skills.Elements("CharSkill"))
          {
-            if (campaign == null)
+            var selectSkillData = skillData.Root.Elements("Skill").Single(s => s.Element("Key").Value == element.Element("Key").Value);
+            var skill = new Skill
             {
-               characters.Add(GetCharacter(file, appFolder));
-            }
-            else
+               Name = selectSkillData.Element("Name").Value,
+               Career = bool.Parse(element.Element("isCareer").Value),
+               CharacteristicName =
+                  characteristicData.Root.Elements("Characteristic")
+                     .Single(s => s.Element("Key").Value == selectSkillData.Element("CharKey").Value)
+                     .Element("Name")
+                     .Value,
+               Rank = GetSum(element.Element("Rank"))
+            };
+
+            skill.CharacteristicValue = (int) character.GetType()
+               .GetProperty(skill.CharacteristicName)
+               .GetValue(character, null);
+
+            switch (selectSkillData.Element("TypeValue").Value)
             {
-               if (XDocument.Load(file).Descendants("Campaign").First().Value == campaign)
-               {
-                  characters.Add(GetCharacter(file, appFolder));
-               }
+               case "stCombat":
+                  character.CombatSkills.Add(skill);
+                  break;
+               case "stKnowledge":
+                  character.KnowledgeSkills.Add(skill);
+                  break;
+               default:
+                  character.GeneralSkills.Add(skill);
+                  break;
             }
          }
-         return characters;
       }
 
       /// <summary>
@@ -105,7 +168,7 @@ namespace SessionManager.Data
       /// </summary>
       /// <param name="speciesTag">The species tag</param>
       /// <param name="appFolder">The app folder for OggDude's tools</param>
-      private string LoadSpeciesFromTag(string speciesTag, string appFolder)
+      private static string LoadSpeciesFromTag(string speciesTag, string appFolder)
       {
          foreach (var file in Directory.EnumerateFiles(Path.Combine(appFolder, "Species"), $"{speciesTag[0]}*.xml"))
          {
@@ -123,7 +186,7 @@ namespace SessionManager.Data
       /// </summary>
       /// <param name="careerTag">The career tag</param>
       /// <param name="appFolder">The app folder for OggDude's tools</param>
-      private string LoadCareerFromTag(string careerTag, string appFolder)
+      private static string LoadCareerFromTag(string careerTag, string appFolder)
       {
          foreach (var file in Directory.EnumerateFiles(Path.Combine(appFolder, "Careers"), $"{careerTag[0]}*.xml"))
          {
@@ -140,7 +203,7 @@ namespace SessionManager.Data
       /// Get the sum of all integer child elements in an xml element
       /// </summary>
       /// <param name="sumElement">The parent element to be summed</param>
-      private int GetSum(XContainer sumElement)
+      private static int GetSum(XContainer sumElement)
       {
          var sum = 0;
          foreach (var element in sumElement.Elements())

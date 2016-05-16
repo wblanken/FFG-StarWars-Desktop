@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:vm="clr-namespace:SessionManager.ViewModels"
         xmlns:views="clr-namespace:SessionManager.Views"
         mc:Ignorable="d"
@@ -11,6 +12,16 @@
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>
+    
+    <Window.Resources>
+        <Style x:Key="CategoryStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Foreground" Value="{StaticResource TitleRed}"/>
+            <Setter Property="Background" Value="{StaticResource TitleBeige}"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -39,16 +50,40 @@
             </MenuItem>
         </Menu>
 
-        <StackPanel Grid.Column="0" Grid.Row="1" Margin="5,10,5,0">
-            <Button Content="Characters" 
-                    Command="{Binding CharacterCommand}"/>
-            <Button Content="Groups"
-                    Command="{Binding GroupCommand}"/>
-            <Button Content="Enemies"
-                    Command="{Binding EnemyCommand}"/>
-            <Button Content="Encounters"
-                    Command="{Binding EncounterCommand}"/>
-        </StackPanel>
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1.5*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Characters" Style="{StaticResource CategoryStyle}"/>
+            <ListBox Grid.Row="1" SelectionMode="Single"
+                     ItemsSource="{Binding Characters}" DisplayMemberPath="Name" 
+                     SelectedItem="{Binding Character}"
+                     Background="{StaticResource GridPaleBlue}" 
+                     Foreground="{StaticResource TitleRed}"/>
+            <TextBlock Grid.Row="2" Text="Groups" Style="{StaticResource CategoryStyle}"/>
+            <ListBox Grid.Row="3" SelectionMode="Single"
+                     ItemsSource="{Binding Groups}" DisplayMemberPath="Name" 
+                     Background="{StaticResource GridPaleBlue}" 
+                     Foreground="{StaticResource TitleRed}"/>
+            <TextBlock Grid.Row="4" Text="Enemies" Style="{StaticResource CategoryStyle}"/>
+            <ListBox Grid.Row="5" SelectionMode="Single"
+                     ItemsSource="{Binding Enemies}" DisplayMemberPath="Name" 
+                     Background="{StaticResource GridPaleBlue}" 
+                     Foreground="{StaticResource TitleRed}"/>
+            <TextBlock Grid.Row="6" Text="Encounters" Style="{StaticResource CategoryStyle}"/>
+            <ListBox Grid.Row="7" SelectionMode="Single"
+                     ItemsSource="{Binding Encounters}" DisplayMemberPath="Name" 
+                     Background="{StaticResource GridPaleBlue}" 
+                     Foreground="{StaticResource TitleRed}"/>
+        </Grid>
         
         <views:CharacterView Grid.Row="1" Grid.Column="1"/>
 

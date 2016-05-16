@@ -11,9 +11,7 @@ namespace Test_Importer
          var dataFolder = @"C:\Users\Will\AppData\Roaming\SWCharGen\";
          var testCharacter = @"D:\Dev\Projects\FFG Star Wars\OggDudeData\Model\Testy.xml";
 
-         var data = new CharacterData();
-
-         var character = data.GetCharacter(testCharacter, appDataFolder);
+         var character = CharacterData.GetCharacter(testCharacter, appDataFolder);
          return;
       }
    }
